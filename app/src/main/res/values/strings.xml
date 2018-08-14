@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_frag_name">Firstfragment</string>
+    <string name="first_radio_name">学习中心</string>
+    <string name="second_frag_name">Secondfragment</string>
+    <string name="second_radio_name">口语家教</string>
+    <string name="frag_loading">网络数据请求加载中</string>
+    <string name="frag_loading_finish">网络数据请求完成</string>
+    <string name="thrid_frag_name">ThirdFragment</string>
+    <string name="four_frag_name">Fourfragment</string>
+    <string name="click_net">点击发送网络请求</string>
+</resources>

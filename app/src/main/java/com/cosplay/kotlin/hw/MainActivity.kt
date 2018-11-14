@@ -127,7 +127,7 @@ class MainActivity : Activity() {
             else -> {
                 intent.setClass(context, MainActivity::class.java)
             }
-            //88888888888888888888888888888
+            //444455555
         }
         startActivity(intent)
 

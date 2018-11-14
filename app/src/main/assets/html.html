@@ -1,0 +1,28 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta content=always name=referrer>
+    <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+    <link rel=icon sizes=any mask
+          href=//www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg>
+    <title>百度一下，你就知道 </title>
+</head>
+<body>
+<button type="button" id="button1" onclick="callAndroid('获取assets目录下文件的路径')">获取assets目录下文件的路径
+    百度一下，你就知道</button>
+</body>
+<script>
+   function callJS(param){
+      var object = document.getElementById("button1");
+       object.innerHTML = param;
+    //  alert(param);
+       myObj.dataFormAndroid("webview调用js 把js的返回值带回来");
+   }
+   function callAndroid(param){
+    var ff = myObj.funFormAndroid(param);
+    alert(ff);
+}
+
+</script>

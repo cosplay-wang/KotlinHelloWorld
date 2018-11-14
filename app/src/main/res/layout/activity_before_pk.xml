@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pk_ing_background"
+    tools:context="com.cosplay.kotlin.hw.ui.activity.PKingActivity">
+
+    <ImageView
+        android:id="@+id/iv_pk_ing_back"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/pk_ing_back" />
+
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:max="10"
+        android:maxHeight="30dp"
+        android:progress="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="3/10"
+        android:textColor="#c56e5c"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pk_ing_headmore"
+        android:layout_below="@+id/iv_pk_ing_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="22dp"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_pk_ing_left"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/tv_my_scroe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="98"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_my_head"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/tv_my_scroe"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/my_circle">
+
+                <ImageView
+                    android:id="@+id/iv_my_circle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_my_head"
+                android:layout_centerHorizontal="true"
+                android:drawableRight="@drawable/vip_logo"
+                android:gravity="center"
+                android:paddingRight="4dp"
+                android:text="翼小小"
+                android:textColor="#fff"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+        <ImageView
+            android:visibility="gone"
+            android:layout_toRightOf="@id/rl_pk_ing_left"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="-5dp"
+            android:id="@+id/pk_ing_my_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pk_ing_my_fire"/>
+        <RelativeLayout
+            android:id="@+id/rl_pk_ing_right"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tv_oppo_scroe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="98"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_oppo_head"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/tv_oppo_scroe"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/my_circle">
+
+                <ImageView
+                    android:id="@+id/iv_oppo_circle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_oppo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_oppo_head"
+                android:layout_centerHorizontal="true"
+                android:drawableRight="@drawable/vip_logo"
+                android:gravity="center"
+                android:paddingRight="4dp"
+                android:text="翼小小"
+                android:textColor="#fff"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+        <ImageView
+            android:visibility="gone"
+            android:layout_toLeftOf="@id/rl_pk_ing_right"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="-5dp"
+            android:id="@+id/pk_ing_oppo_fire"
+            android:layout_width="84dp"
+            android:layout_height="27dp"
+            android:src="@drawable/pk_ing_oppo_fire"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/rl_num_question"
+        android:background="@drawable/pk_ing_num_background">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="23sp"
+            android:textColor="#ee7b4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_pk_ing_num"
+            android:text="第1句"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rl_pk_ing_headmore"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rl_test_content"
+        android:background="@drawable/pk_ing_content_background">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="23sp"
+            android:textColor="#ee7b4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_pk_ing_content"
+            android:text="第1句"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

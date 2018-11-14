@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cosplay.kotlin.hw.ui.activity.NotificaTionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_normal"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="正常的" />
+            <TextView
+                android:id="@+id/tv_big_1"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="大通知" />
+            <TextView
+                android:id="@+id/tv_max_progress"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="有进度的" />
+
+            <TextView
+                android:id="@+id/tv_no_progress"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="不确定进度的" />
+
+            <TextView
+                android:id="@+id/tv_head"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="悬浮的" />
+
+            <TextView
+                android:id="@+id/tv_customer_1"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="自定义的" />
+            <TextView
+                android:id="@+id/tv_task_1"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设置task，在进入activity后，点击返回不退出应用，返回mainactivity" />
+            <TextView
+                android:id="@+id/tv_parameter_1"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="传参数" />
+            <TextView
+                android:id="@+id/tv_cancel_1"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="取消" />
+            <TextView
+                android:id="@+id/tv_cancelall_1"
+                style="@style/CommonText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="取消全部" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

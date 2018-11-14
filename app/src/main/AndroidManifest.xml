@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cosplay.kotlin.hw">
+    package="com.cosplay.kotlin.hw"
+    android:versionCode="2"
+    android:versionName="1.0">
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- 需要网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 需要获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取设备唯一标识 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 通用权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
 
     <application
+        android:name=".APP"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".APP"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="ZHUGE_APPKEY"
+            android:value="81af8fbc225b427090bf52bf48f86a54" />
+        <meta-data
+            android:name="ZHUGE_CHANNEL"
+            android:value="我的应用市场" />
+        <meta-data
+            android:name="name"
+            android:value="自强不息" />
+        <meta-data
+            android:name="city"
+            android:value="北京" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +62,51 @@
         <activity android:name=".ui.activity.LayoutAct" />
         <activity android:name=".ui.activity.Handler2ThreadAct" />
         <activity android:name=".ui.activity.ViewPagerAct" />
-        <activity android:name=".ui.activity.Main2Activity" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".ui.activity.NetAct" />
         <activity android:name=".ui.activity.FragmentAct" />
+        <activity
+            android:name=".ui.activity.H5Activity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.activity.XwalkViewActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.activity.X5Activity"
+            android:theme="@style/FullScreen" />
+
+        <service
+            android:name=".ui.service.X5Service"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="QBSDKAppKey"
+            android:value="yourProjectAppKey" />
+
+        <activity
+            android:name=".ui.activity.PKAnimationActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.activity.PKingActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name=".ui.activity.BeforePKActivity" />
+        <activity
+            android:name=".ui.activity.AccelerometerActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name=".ui.activity.NotificaTionActivity" />
+        <activity android:name=".ui.activity.ManifestMetaActivity">
+            <meta-data
+                android:name="activityname"
+                android:value="自强actvity不息" />
+        </activity>
+        <activity android:name=".ui.activity.AndpermisstionActivity" />
+        <activity android:name=".ui.activity.FooterRecordActivity" />
+        <activity android:name=".ui.activity.LottieActivity" />
+        <activity android:name=".ui.activity.FingerPrintActivity" />
+        <activity android:name=".ui.activity.FingerPrintCompatActivity" />
+        <activity android:name=".ui.activity.BiometricPromptActivity"></activity>
+        <activity android:name=".ui.activity.WechatFingerPrintActivity"></activity>
     </application>
 
 </manifest>

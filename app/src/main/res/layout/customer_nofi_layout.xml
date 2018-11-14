@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:src="@drawable/yibao_ko_success01" />
+    <TextView
+        android:layout_weight="3"
+        style="@style/CommonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/frag_loading_finish"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:src="@drawable/yibao_ko_failure19" />
+
+</LinearLayout>

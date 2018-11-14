@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="radio_check">#fff</color>
     <color name="radio_no_check">#ccc</color>
+    <color name="ek_main_task_ed_color">#ffc438</color>
+    <color name="ek_main_task_exp_color">#a0dd1d</color>
+    <color name="paint1_color">#ffffff</color>
+    <color name="paint2_color">#ccffffff</color>
+    <color name="paint3_color">#80ffffff</color>
 </resources>

@@ -1,113 +1,141 @@
 package com.cosplay.kotlin.hw
 
+import android.animation.AnimatorInflater
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.NotificationManagerCompat
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.cosplay.kotlin.hw.ui.activity.*
 import com.cosplay.kotlin.hw.ui.adapter.MainRvAp
+import com.cosplay.kotlin.hw.util.track
+import com.yanzhenjie.permission.AndPermission
+import com.yanzhenjie.permission.R.style.Permission
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONObject
+
 
 class MainActivity : Activity() {
-//    var sHello: String = "hh"
-//    var mess: Int = 1
-//
-//    private lateinit var handler: Handler
-//    lateinit var thread: Thread
     lateinit var dataList: MutableList<String>
-    var context:Context = this;
+    var context: Context = this;
     //  val jjj : int = 1;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        getExtras()
         getDataList()
         kotlin_rv.layoutManager = LinearLayoutManager(this)
-        kotlin_rv.adapter = MainRvAp(dataList,this,rvItemClick(),rvItemInnerClick())
-//        sHello = "jjjjj"
-//        //    jjj = 2
-//        Log.e(sHello, sHello)
-//        onMyFirstMethod("jjjsass")
-//        thread = Thread(Runnable {
-//            kotlin.run {
-//                var message = Message()
-//                message.what = 1000;
-//                message.obj = "11"
-//                handler.sendMessageDelayed(message, 3000 + 5000)
-//            }
-//        })
-//        thread.start()
-//        handler = object : Handler() {
-//            override fun handleMessage(msg: Message?) {
-//                super.handleMessage(msg)
-//                when (msg?.what) {
-//                    1 -> {
-//                        Log.e("hh", msg?.what.toString() + "===");
-//                        mess++
-//                        handler.sendEmptyMessageDelayed(mess, 1000);
-//                    }
-//                    2 -> {
-//                        Log.e("hh", msg.what.toString() + "==");
-//                        mess++
-//                        handler.sendEmptyMessageDelayed(mess, 1000);
-//                    }
-//                    else -> {
-//                        Log.e("hh", msg?.what.toString() + "==");
-//                    }
-//
-//                }
-//            }
-//        };
-//        handler.sendEmptyMessageDelayed(mess, 2000);
+        kotlin_rv.adapter = MainRvAp(dataList, this, rvItemClick(), rvItemInnerClick())
+        //   var animation = AnimationUtils.loadAnimation(context,R.anim.simple_1)//原有的动画加载方式
+        var animation = AnimatorInflater.loadAnimator(context, R.animator.simple_1)//属性动画的加载方式
+        animation.setTarget(tv_anim)
+        animation.start()
+        if(NotificationManagerCompat.from(this).areNotificationsEnabled()){
+            Log.e("aaa","1111");
+        }else{
+            Log.e("aaa","2222");
+        }
+
     }
 
-//    fun onMyFirstMethod(hh: String) {
-//        Log.e(sHello, hh + onMyFirstBackMethod())
-//    }
-//
-//    fun onMyFirstBackMethod(): String {
-//        return "acdr"
-//    }
-    inner class rvItemClick : MainRvAp.ItemClick{
-    override fun onItemClick(v: View, position: Int) {
-        Toast.makeText(context,"d点击了"+position,Toast.LENGTH_SHORT).show()
-        skipControlCenter(position)
-    }
-}
-    inner class rvItemInnerClick : MainRvAp.ItemInnerClick{
-        override fun onItemInnerClick(v: View, position: Int) {
-            Toast.makeText(context,"d点击了"+dataList[position],Toast.LENGTH_SHORT).show()
+
+    inner class rvItemClick : MainRvAp.ItemClick {
+        override fun onItemClick(v: View, position: Int) {
+            Toast.makeText(context, "d点击了" + position, Toast.LENGTH_SHORT).show()
             skipControlCenter(position)
         }
     }
-    fun skipControlCenter(position :Int){
-         var intent =  Intent()
-        when(position)
-        {
-            0-> {
-                intent.setClass(context,LayoutAct::class.java)
+
+    inner class rvItemInnerClick : MainRvAp.ItemInnerClick {
+        override fun onItemInnerClick(v: View, position: Int) {
+            Toast.makeText(context, "d点击了" + dataList[position], Toast.LENGTH_SHORT).show()
+            skipControlCenter(position)
+            //  startActivity<Main2Activity>("id" to 1,"name" to "kotlin")
+        }
+    }
+
+    fun skipControlCenter(position: Int) {
+        var intent = Intent()
+        when (position) {
+            0 -> {
+                intent.setClass(context, LayoutAct::class.java)
             }
-            1->{
+            1 -> {
                 intent.setClass(context, Handler2ThreadAct::class.java)
             }
-            2->{
+            2 -> {
                 intent.setClass(context, ViewPagerAct::class.java)
             }
-            3->{
+            3 -> {
                 intent.setClass(context, FragmentAct::class.java)
             }
-            4->{
+            4 -> {
                 intent.setClass(context, NetAct::class.java)
             }
-            else ->{
-                intent.setClass(context,MainActivity::class.java)
+            5 -> {
+                intent.setClass(context, H5Activity::class.java)
             }
+            6 -> {//crosswalk和tbs不能同时使用，否则tbs崩溃  在小米上
+                intent.setClass(context, XwalkViewActivity::class.java)
+            }
+            7 -> {
+                intent.setClass(context, X5Activity::class.java)
+            }
+            8 -> {
+                intent.setClass(context, PKAnimationActivity::class.java)
+            }
+            9 -> {
+                intent.setClass(context, PKingActivity::class.java)
+            }
+            10 -> {
+                intent.setClass(context, BeforePKActivity::class.java)
+            }
+            11 -> {
+                intent.setClass(context, AccelerometerActivity::class.java)
+            }
+            12 -> {
+                intent.setClass(context, NotificaTionActivity::class.java)
+            }
+            13 -> {
+                intent.setClass(context, ManifestMetaActivity::class.java)
+            }
+            14 -> {
+                intent.setClass(context, AndpermisstionActivity::class.java)
+            }
+            15 -> {
+                intent.setClass(context, FooterRecordActivity::class.java)
+            }
+            16 -> {
+                intent.setClass(context, LottieActivity::class.java)
+            }
+            17 -> {
+                intent.setClass(context, FingerPrintActivity::class.java)
+            }
+            18 -> {
+                intent.setClass(context, FingerPrintCompatActivity::class.java)
+            }
+            19 -> {
+                intent.setClass(context, BiometricPromptActivity::class.java)
+            }
+            20 -> {
+                intent.setClass(context, WechatFingerPrintActivity::class.java)
+            }
+            else -> {
+                intent.setClass(context, MainActivity::class.java)
+            }
+            //88888888888888888888888888888
         }
         startActivity(intent)
+
+
     }
+
+
+
 
     fun getDataList() {
         dataList = ArrayList<String>()
@@ -116,5 +144,39 @@ class MainActivity : Activity() {
         dataList.add("第三题-----viewpager+ view+ fragment")
         dataList.add("第四题-----fragment")
         dataList.add("第五题-----网络请求")
+        dataList.add("第六题-----H5+webview原生")
+        dataList.add("第七题-----H5+xwalkview自己的webview")
+        dataList.add("第八题-----H5+x5自己的webview")
+        dataList.add("第九题-----pk结果动画")
+        dataList.add("第10题-----pk进行中")
+        dataList.add("第11题-----pk匹配")
+        dataList.add("第12题-----摇一摇的实现")
+        dataList.add("第13题-----通知的部分")
+        dataList.add("第14题-----读取menifest的meta标签")
+        dataList.add("第15题-----andPermisstion 动态权限")
+        dataList.add("第16题-----用户足迹")
+        dataList.add("第17题-----lottie  Json动画")
+        dataList.add("第18题-----指纹识别")
+        dataList.add("第19题-----指纹识别support" +
+                "V4")
+        dataList.add("第20题-----9.0指纹识别BiometricPrompt" +
+                "生物识别 为之后的面部识别 虹膜识别之类的")
+        dataList.add("第21题-----微信的指纹识别库 ")
+        //定义与事件相关的属性信息
+        val eventObject = JSONObject()
+        eventObject.put("分类", "手机")
+        eventObject.put("名称", "iPhone6 plus 64g")
+        track(this,"key1",eventObject)
+    }
+
+    private fun getExtras() {
+        var intentContent: String = "getintent:"
+        if (intent.getStringExtra("notificationID") != null) {
+            intentContent = intentContent + intent.getStringExtra("notificationID")
+        }
+        if (intent.getStringExtra("name") != null) {
+            intentContent = intentContent + intent.getStringExtra("name")
+        }
+        Toast.makeText(this, intentContent, Toast.LENGTH_SHORT).show()
     }
 }

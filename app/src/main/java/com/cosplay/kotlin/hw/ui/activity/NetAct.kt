@@ -7,17 +7,18 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
 import com.cosplay.kotlin.hw.R
 import com.cosplay.kotlin.hw.util.HttpUtils
 import kotlinx.android.synthetic.main.activity_net.*
 import okhttp3.Response
 import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.toast
 import org.jetbrains.anko.uiThread
 import pub.devrel.easypermissions.EasyPermissions
 import java.net.URL
 import java.nio.charset.Charset
+import kotlin.concurrent.thread
 
 
 class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.PermissionCallbacks {
@@ -55,6 +56,14 @@ class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.Permiss
                             }
                         },3000)
                     }
+                    4->{
+                        tv_click_4.text = msg!!.obj.toString()
+                        handler.postDelayed(Runnable {
+                            kotlin.run {
+                                tv_click_4.text = getString(R.string.click_net)+"kitlin自带的url+kotlin系的thread异步"
+                            }
+                        },3000)
+                    }
                 }
 
             }
@@ -62,6 +71,8 @@ class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.Permiss
         tv_click.setOnClickListener(this)
         tv_click_2.setOnClickListener(this)
         tv_click_3.setOnClickListener(this)
+        tv_click_4.setOnClickListener(this)
+        //tv_click.setOnClickListener { toast("ssssssssssssssss") }
     }
 
     override fun onClick(v: View?) {
@@ -69,7 +80,7 @@ class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.Permiss
             R.id.tv_click -> {
                 if (Build.VERSION.SDK_INT >= 23) {
                     //打电话的权限
-                    var mPermission = Manifest.permission.INTERNET
+                    var mPermission = Manifest.permission.WRITE_EXTERNAL_STORAGE
                     if (EasyPermissions.hasPermissions(context, mPermission)) {
                         //已经同意过
                         requestData()
@@ -103,7 +114,6 @@ class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.Permiss
                 }
             }
             R.id.tv_click_3 -> {
-              //  thirdThread(url).start()
                 doAsync {
                     var response:Response = HttpUtils.okHttpRequest(url,null)
                     var data = response.body()!!.string()
@@ -118,10 +128,22 @@ class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.Permiss
 
                 }
             }
+            R.id.tv_click_4 -> {
+
+                thread(start = true, isDaemon = false, name = "DThread", priority = 3) {
+                    var json = getUrlContent(url)
+                    var  message :Message  = handler.obtainMessage()
+                    message.what = 4
+                    message.obj = json
+                    handler.sendMessageDelayed(message,1000)
+                }
+                }
+
         }
     }
 
     private fun requestData() {
+
         oneThread(url).start()
 
     }
@@ -164,10 +186,10 @@ class NetAct : AppCompatActivity(),View.OnClickListener, EasyPermissions.Permiss
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 }

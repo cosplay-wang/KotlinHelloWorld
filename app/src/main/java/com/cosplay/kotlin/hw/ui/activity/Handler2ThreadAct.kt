@@ -7,6 +7,9 @@ import android.os.Handler
 import android.os.Message
 import android.widget.Toast
 import com.cosplay.kotlin.hw.R
+import com.cosplay.kotlin.hw.util.endTrack
+import com.cosplay.kotlin.hw.util.startTrack
+import org.json.JSONObject
 
 /**
  * Author:wangzhiwei on 2018/8/10.
@@ -21,6 +24,7 @@ class Handler2ThreadAct :Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initData()
+        startTrack("开始计时")
         thread.start()
 
     }
@@ -28,6 +32,11 @@ class Handler2ThreadAct :Activity() {
         handler = object : Handler(){
             override fun handleMessage(msg: Message?) {
                 super.handleMessage(msg)
+                //视频观看结束
+                val pro = JSONObject()
+                pro.put("名称", "看的什么呀,非诚勿扰")
+                pro.put("期数", "2016-11-02")
+                endTrack("开始计时", pro)
                 Toast.makeText(context,"thread.sleep==3000",Toast.LENGTH_SHORT).show()
             }
         }

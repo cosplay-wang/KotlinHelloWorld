@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cosplay.kotlin.hw.util.pkslide.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/drag_view"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="5dp"
+    sothree:umanoParallaxOffset="5dp"
+    sothree:umanoScrollableView="@+id/rv_bottom_pk_detail"
+    sothree:umanoShadowHeight="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_pk_success_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <ImageView
+            android:id="@+id/iv_pk_success_center_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="148dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pk_success_center_image"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pk_success_pk_left"
+            android:layout_width="@dimen/rl_pk_success_pk_left_width"
+            android:layout_height="358dp"
+            android:layout_marginTop="260dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_pk_success_pk_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="156dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/success_left_bottom" />
+
+            <ImageView
+                android:id="@+id/iv_pk_success_pk_left_top"
+                android:layout_width="230dp"
+                android:layout_height="218dp"
+                android:layout_marginLeft="65dp"
+                android:src="@drawable/yibao_ko_success01" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pk_failure_pk_left"
+            android:layout_width="@dimen/rl_pk_success_pk_left_width"
+            android:layout_height="528dp"
+            android:layout_marginTop="260dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_pk_failure_pk_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="156dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/success_left_bottom" />
+
+            <ImageView
+                android:id="@+id/iv_pk_failure_pk_left_top"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_marginBottom="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/yibao_ko_failure01" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pk_success_pk"
+            android:layout_width="311dp"
+            android:layout_height="@dimen/rl_pk_success_pk_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/rl_pk_success_pk_top_margin"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_pk_success_pk_laugh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_pk_success_pk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/pk_success" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pk_failure_pk"
+            android:layout_width="311dp"
+            android:layout_height="@dimen/rl_pk_success_pk_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/rl_pk_success_pk_top_margin"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_pk_failure_pk_cry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_pk_falture_pk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/pk_failure" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pk_success_pk_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/rl_pk_success_pk"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_exp_dou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.cosplay.kotlin.hw.util.FontTextview
+                    android:id="@+id/ft_dou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ek_main_task_ed_iv"
+                    android:gravity="center"
+                    android:text="+2"
+                    android:textColor="@color/ek_main_task_ed_color"
+                    android:textSize="14sp" />
+
+                <com.cosplay.kotlin.hw.util.FontTextview
+                    android:id="@+id/ft_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:drawableLeft="@drawable/ek_main_task_exp_iv"
+                    android:gravity="center"
+                    android:text="+5"
+                    android:textColor="@color/ek_main_task_exp_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_pk_failure_center_back"
+                android:layout_width="290dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/ll_exp_dou"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="125dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pk_failure_center_image"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_pk_detail_head"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_exp_dou"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="93dp"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/my_circle">
+
+                        <ImageView
+                            android:id="@+id/iv_my_circle"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_my_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_head"
+                        android:layout_centerHorizontal="true"
+                        android:drawableRight="@drawable/vip_logo"
+                        android:gravity="center"
+                        android:paddingRight="4dp"
+                        android:text="翼小小"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_my_scroe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_my_name"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="98"
+                        android:textColor="#fff"
+                        android:textSize="33sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_success_crown"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:src="@drawable/success_crown" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="41dp"
+                    android:src="@drawable/vs" />
+
+                <RelativeLayout
+                    android:layout_width="93dp"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_opponent"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/my_circle">
+
+                        <ImageView
+                            android:id="@+id/iv_opponent_circle"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_opponent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_opponent"
+                        android:layout_centerHorizontal="true"
+                        android:drawableRight="@drawable/vip_logo"
+                        android:gravity="center"
+                        android:paddingRight="4dp"
+                        android:text="翼大大"
+                        android:textColor="#fff"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_opponent_scroe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_opponent_name"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="88"
+                        android:textColor="#fff"
+                        android:textSize="33sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_faiure_crown"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:src="@drawable/success_crown"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_button_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_change_against"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/change_oppo"
+                    android:gravity="center"
+                    android:text="换个对手"
+                    android:textColor="#ffaa00"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_share_against"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/share_oppo"
+                    android:gravity="center"
+                    android:text="炫耀一下"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pk_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_button_bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_pk_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PK详情"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_pk_result_back"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/pk_result_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/drag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/success_back"
+        android:clickable="true"
+        android:focusable="false">
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_pk_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_pk_bottom_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PK详情"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_bottom_pk_detail"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/pk_detail_top_back">
+
+            <android.support.v7.widget.RecyclerView
+                android:background="#147852"
+                android:id="@+id/rv_bottom_pk_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="20dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="52dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom_head"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/my_circle">
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_my_circle"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_bottom_my_scroe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_bottom_head"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="98"
+                    android:textColor="#000"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/iv_bottom_success_crown"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:src="@drawable/success_crown" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:gravity="center"
+                android:text="vs"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="52dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom_opponent"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/my_circle">
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_opponent_circle"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_bottom_opponent_scroe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_bottom_opponent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="88"
+                    android:textColor="#000"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/iv_bottom_faiure_crown"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:src="@drawable/success_crown"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.cosplay.kotlin.hw.util.pkslide.SlidingUpPanelLayout>

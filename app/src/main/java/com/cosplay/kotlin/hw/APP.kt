@@ -17,8 +17,7 @@ import com.zhuge.analysis.stat.ZhugeSDK
 import com.zhuge.analysis.stat.ZhugeParam
 import org.json.JSONObject
 import android.support.annotation.NonNull
-
-
+import android.util.DisplayMetrics
 
 
 /**
@@ -37,6 +36,7 @@ class APP : Application() {
         Stetho.initializeWithDefaults(this)
         initZhuge()
         initWeichat()
+
     }
 
     companion object {

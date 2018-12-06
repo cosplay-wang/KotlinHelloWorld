@@ -27,15 +27,16 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:name=".APP"
         android:allowBackup="true"
+        android:debuggable="true"
         android:hardwareAccelerated="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/ic_fp_40px"
         android:largeHeap="true"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -50,7 +51,7 @@
             android:value="自强不息" />
         <meta-data
             android:name="city"
-            android:value="北京" />
+            android:value="${aaa}" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -105,8 +106,12 @@
         <activity android:name=".ui.activity.LottieActivity" />
         <activity android:name=".ui.activity.FingerPrintActivity" />
         <activity android:name=".ui.activity.FingerPrintCompatActivity" />
-        <activity android:name=".ui.activity.BiometricPromptActivity"></activity>
-        <activity android:name=".ui.activity.WechatFingerPrintActivity"></activity>
+        <activity android:name=".ui.activity.BiometricPromptActivity" />
+        <activity android:name=".ui.activity.WechatFingerPrintActivity" />
+        <activity android:name=".ui.activity.TTdensityActivity" />
+        <activity android:name=".ui.activity.SpannableStringActivity" />
+        <activity android:name=".ui.activity.DialogAActivity"
+            android:theme="@style/TranslucentTheme"></activity>
     </application>
 
 </manifest>

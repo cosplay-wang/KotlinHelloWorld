@@ -15,6 +15,7 @@ import com.tencent.smtt.sdk.WebSettings
 import com.tencent.smtt.sdk.WebView
 import com.tencent.smtt.sdk.WebViewClient
 import kotlinx.android.synthetic.main.activity_x5.*
+import kotlinx.android.synthetic.main.activity_xwalk_view.*
 import org.jetbrains.anko.toast
 
 class X5Activity : AppCompatActivity() {
@@ -23,8 +24,9 @@ class X5Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_x5)
         var mWebView = X5WebView(this, null)
-      //  mWebView.loadUrl("file:///android_asset/html.html")
-        mWebView.loadUrl("http://o.officeweb365.com/p/pv.aspx?PowerPointView=ReadingView&WOPISrc=http%3A%2F%2Fow365%2Fwopi%2Ffiles%2F%40%2Fwopi%3FvId%3DZlxSBXe6aF7MIHeDp01c0A%3D%3D&bs=cHB0LjFwcHQuY29tLjgwXDgxODA4MTYyMDUzNDU2NjUwMDEyMDM2NDlfMjM1NTU4OFzlpKfmsJTllYbliqHono3otYTorqHliJLkuaZQUFTmqKHmnb8yLnBwdHg=&token=S98e7hTQp9yVbUHTYXcgDe2DaoJb11M8&cancopy=")
+       mWebView.loadUrl("file:///android_asset/tokeninfo.html")
+        mWebView.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
+     //   mWebView.loadUrl("https://mapi.ekwing.com/student/race/getracelist?product=student&os=Android&driverCode=3.4.8&v=2.8&token=FMTM1MTkwNiMjMTAyNzgzMzEjIzA3YzMwZjljNzExZmM3NGJmOGQyMWU1Y2IyMzgzOGRjIyMzY2MzYTZjNTAxMzAyMjgzMzMyOTgyNmE2YmM3YjM4ZSMjMTU0NTgxNjYzMiMjMiMjMiMjc3R1w&uid=1351906&is_http=1&author_id=1351906&type=0")
         fl_layout.addView(mWebView, FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.MATCH_PARENT))
@@ -55,19 +57,26 @@ class X5Activity : AppCompatActivity() {
         webSetting.pluginState = WebSettings.PluginState.ON_DEMAND
         // webSetting.setRenderPriority(WebSettings.RenderPriority.HIGH);
         // webSetting.setPreFectch(true);
+//        mWebView.postDelayed(Runnable { kotlin.run {
+//            mWebView.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
+//        } },1000)
         mWebView.addJavascriptInterface(JavaScriptObject(this), "myObj")
         mWebView.webViewClient = object:WebViewClient(){
             override fun onReceivedSslError(p0: WebView?, p1: SslErrorHandler?, p2: SslError?) {
                 super.onReceivedSslError(p0, p1, p2)
                 p1!!.proceed()
             }
-
             override fun onPageStarted(p0: WebView?, p1: String?, p2: Bitmap?) {
                 super.onPageStarted(p0, p1, p2)
+             //   if(!p1!!.contains("javascript")){
+                    mWebView.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
+               // }
+
             }
 
             override fun onPageFinished(p0: WebView?, p1: String?) {
                 super.onPageFinished(p0, p1)
+                mWebView.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
             }
 
         }

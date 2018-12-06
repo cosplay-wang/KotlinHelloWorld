@@ -28,9 +28,15 @@ class XwalkViewActivity : AppCompatActivity() {
         xwv_webview.addJavascriptInterface(JavaScriptObject(this),"myObj")
         xwv_webview.settings.useWideViewPort = true
         xwv_webview.settings.loadWithOverviewMode = true
-       // xwv_webview.loadUrl("https://view.officeapps.live.com/op/view.aspx?src=http://moqi-git.github.io/ppt%20(1).pptx")
-        xwv_webview.loadUrl("http://o.officeweb365.com/p/pv.aspx?PowerPointView=ReadingView&WOPISrc=http%3A%2F%2Fow365%2Fwopi%2Ffiles%2F%40%2Fwopi%3FvId%3DZlxSBXe6aF7MIHeDp01c0A%3D%3D&bs=cHB0LjFwcHQuY29tLjgwXDgxODA4MTYyMDUzNDU2NjUwMDEyMDM2NDlfMjM1NTU4OFzlpKfmsJTllYbliqHono3otYTorqHliJLkuaZQUFTmqKHmnb8yLnBwdHg=&token=S98e7hTQp9yVbUHTYXcgDe2DaoJb11M8&cancopy=")
-      //  xwv_webview.loadUrl("file:///android_asset/html.html")
+      //  xwv_webview.loadUrl("https://mapi.ekwing.com/student/race/getracelist?product=student&os=Android&driverCode=3.4.8&v=2.8&token=FMTM1MTkwNiMjMTAyNzgzMzEjIzA3YzMwZjljNzExZmM3NGJmOGQyMWU1Y2IyMzgzOGRjIyMzY2MzYTZjNTAxMzAyMjgzMzMyOTgyNmE2YmM3YjM4ZSMjMTU0NTgxNjYzMiMjMiMjMiMjc3R1w&uid=1351906&is_http=1&author_id=1351906&type=0")
+      //  xwv_webview.loadUrl("http://o.officeweb365.com/p/pv.aspx?PowerPointView=ReadingView&WOPISrc=http%3A%2F%2Fow365%2Fwopi%2Ffiles%2F%40%2Fwopi%3FvId%3DZlxSBXe6aF7MIHeDp01c0A%3D%3D&bs=cHB0LjFwcHQuY29tLjgwXDgxODA4MTYyMDUzNDU2NjUwMDEyMDM2NDlfMjM1NTU4OFzlpKfmsJTllYbliqHono3otYTorqHliJLkuaZQUFTmqKHmnb8yLnBwdHg=&token=S98e7hTQp9yVbUHTYXcgDe2DaoJb11M8&cancopy=")
+        xwv_webview.loadUrl("file:///android_asset/tokeninfo.html")
+//        xwv_webview.post {
+//            xwv_webview.loadUrl("javascript:window.tokenInfo={aaaa}")
+//        }
+//        xwv_webview.postDelayed(Runnable { kotlin.run {
+//            xwv_webview.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
+//        } },1000)
         bt_na2js.setOnClickListener {
             xwv_webview.loadUrl("javascript:callJS('aaaaaaaaasesasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')")
 
@@ -49,9 +55,7 @@ class XwalkViewActivity : AppCompatActivity() {
                 animationDrawable.start()
                 iv_loading.visibility = View.VISIBLE
             }
-
-
-
+            xwv_webview.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
         }
 
         override fun onLoadFinished(view: XWalkView?, url: String?) {
@@ -108,11 +112,11 @@ class XwalkViewActivity : AppCompatActivity() {
         }
     }
 
-    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
-        if (xwv_webview != null) {
-            xwv_webview.onActivityResult(requestCode, resultCode, data)
-        }
-    }
+//    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+//        if (xwv_webview != null) {
+//            xwv_webview.onActivityResult(requestCode, resultCode, data)
+//        }
+//    }
 
     public override fun onNewIntent(intent: Intent) {
         if (xwv_webview != null) {

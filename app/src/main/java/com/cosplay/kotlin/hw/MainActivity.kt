@@ -5,6 +5,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
 import android.support.v4.app.NotificationManagerCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
@@ -12,6 +14,8 @@ import android.view.View
 import android.widget.Toast
 import com.cosplay.kotlin.hw.ui.activity.*
 import com.cosplay.kotlin.hw.ui.adapter.MainRvAp
+import com.cosplay.kotlin.hw.util.DeviceUtils
+import com.cosplay.kotlin.hw.util.MetaUtils
 import com.cosplay.kotlin.hw.util.track
 import com.yanzhenjie.permission.AndPermission
 import com.yanzhenjie.permission.R.style.Permission
@@ -39,6 +43,18 @@ class MainActivity : Activity() {
         }else{
             Log.e("aaa","2222");
         }
+        Log.e("metaData",MetaUtils.getMetaDataValue(context,"city")+"=---"+resources.getString(R.string.ura));
+
+        var handler:Handler= object :Handler(){
+            override fun handleMessage(msg: Message?) {
+                super.handleMessage(msg)
+            }
+        }
+        DeviceUtils.hasSimCard(context)
+        DeviceUtils.isPad(context)
+//        handler.postDelayed(Runnable {
+//              startActivity(Intent(context,DialogAActivity::class.java));
+//        },5000)
 
     }
 
@@ -124,6 +140,12 @@ class MainActivity : Activity() {
             20 -> {
                 intent.setClass(context, WechatFingerPrintActivity::class.java)
             }
+            21 -> {
+                intent.setClass(context, SpannableStringActivity::class.java)
+            }
+            22 -> {
+                intent.setClass(context, TTdensityActivity::class.java)
+            }
             else -> {
                 intent.setClass(context, MainActivity::class.java)
             }
@@ -162,12 +184,15 @@ class MainActivity : Activity() {
         dataList.add("第20题-----9.0指纹识别BiometricPrompt" +
                 "生物识别 为之后的面部识别 虹膜识别之类的")
         dataList.add("第21题-----微信的指纹识别库 ")
+        dataList.add("第22题-----部分文字实现点击事件 ")
+        dataList.add("第23题-----头条适配 ")
         //定义与事件相关的属性信息
         val eventObject = JSONObject()
         eventObject.put("分类", "手机")
         eventObject.put("名称", "iPhone6 plus 64g")
         track(this,"key1",eventObject)
     }
+
 
     private fun getExtras() {
         var intentContent: String = "getintent:"

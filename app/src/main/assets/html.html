@@ -14,15 +14,20 @@
     百度一下，你就知道</button>
 </body>
 <script>
+
    function callJS(param){
       var object = document.getElementById("button1");
        object.innerHTML = param;
     //  alert(param);
-       myObj.dataFormAndroid("webview调用js 把js的返回值带回来");
+    //   myObj.dataFormAndroid("webview调用js 把js的返回值带回来");
+      //  var str = JSON.stringify(window.tokenInfo);
+      //  $("#button1").text("ssssssssssssssssss")
+        alert("ssssssssssssss");
    }
    function callAndroid(param){
-    var ff = myObj.funFormAndroid(param);
-    alert(ff);
+   // var ff = myObj.funFormAndroid(param);
+   var str = JSON.stringify(window.tokenInfo);
+    alert(str);
 }
 
 </script>

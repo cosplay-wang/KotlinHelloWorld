@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bt_na2js"
         android:text="@string/native_2_js"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

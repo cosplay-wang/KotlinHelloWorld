@@ -34,9 +34,7 @@
         android:allowBackup="true"
         android:debuggable="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/ic_fp_40px"
         android:largeHeap="true"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -53,13 +51,42 @@
             android:name="city"
             android:value="${aaa}" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/ic_fp_40px"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity-alias
+            android:name=".icon_tag_1212"
+            android:enabled="false"
+            android:icon="@drawable/yibao_ko_failure12"
+            android:label="失败2"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".icon_tag"
+            android:enabled="false"
+            android:icon="@drawable/yibao_ko_failure01"
+            android:label="失败1"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
         <activity android:name=".ui.activity.LayoutAct" />
         <activity android:name=".ui.activity.Handler2ThreadAct" />
         <activity android:name=".ui.activity.ViewPagerAct" />
@@ -110,8 +137,26 @@
         <activity android:name=".ui.activity.WechatFingerPrintActivity" />
         <activity android:name=".ui.activity.TTdensityActivity" />
         <activity android:name=".ui.activity.SpannableStringActivity" />
-        <activity android:name=".ui.activity.DialogAActivity"
-            android:theme="@style/TranslucentTheme"></activity>
+        <activity
+            android:name=".ui.activity.DialogAActivity"
+            android:theme="@style/TranslucentTheme" />
+        <activity android:name=".ui.activity.LoadingAnimationActivity" />
+        <activity android:name=".ui.activity.TextviewActivity" />
+        <activity android:name=".ui.activity.ImmersionActivity" />
+        <activity android:name=".ui.activity.ObserverableMode" />
+        <activity android:name=".ObserveActivity.EventActivity" />
+        <activity android:name=".ObserveActivity.SubscribeOneActivity" />
+        <activity android:name=".ObserveActivity.SubscribeTwoActivity" />
+        <activity android:name=".ObserveActivity.SubscribeThreeActivity" />
+        <activity android:name=".ObserveActivity.BaseSubscribeActivity" />
+        <activity android:name=".mvvm.view.MVVM1Activity" />
+        <activity android:name=".ui.activity.SetlayoutparamsActivity" />
+        <activity android:name=".mvvm2.Mvvm2Activity" />
+        <activity android:name=".ui.activity.ExecutorSchedulerActivity" />
+        <activity
+            android:name=".ui.activity.ChangeIconActivity"
+            android:theme="@style/AppThemeApp" />
+        <activity android:name=".ui.activity.SmartRefreshActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,32 @@
+ext {
+    abc = [
+        ggversionName = "1.0.0",
+        ggversionCode = "code:1.0.0"
+    ]
+
+    nnn = 28
+
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.2",
+            minSdkVersion: 19,
+            targetSdkVersion : 28,
+            versionCode:10,
+            versionName:"1.0"
+
+    ]
+    depversion = [
+            support:"28.0.0"
+    ]
+
+    manifestPlaceholders = [
+            aaaac: "vvvvv",
+            bbbac: "bvvvvvvvvvvvvvvvvbbb"
+    ]
+
+
+
+
+
+
+}

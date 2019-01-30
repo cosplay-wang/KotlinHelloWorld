@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mvvm.view.MVVM1Activity">
+
+    <data>
+
+        <variable
+            name="bookmodel"
+            type="com.cosplay.kotlin.hw.mvvm.entity.BookEntity"></variable>
+        <variable
+            name="adapter"
+            type="com.cosplay.kotlin.hw.mvvm.adapter.RvAdapter"></variable>
+        <variable
+            name="viewModel"
+            type="com.cosplay.kotlin.hw.mvvm.viewmodel.BookViewModel"></variable>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:clickable="true"
+            android:id="@+id/my_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@{bookmodel.name}"
+            android:onClick="@{viewModel::click}"
+            android:textColor="@color/btg_global_text_blue"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/my_tv"
+            android:id="@+id/myrv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adapter="@{adapter}"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</layout>

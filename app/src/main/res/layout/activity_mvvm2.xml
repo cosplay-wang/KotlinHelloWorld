@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mvvm2.Mvvm2Activity">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.cosplay.kotlin.hw.mvvm2.adapter.RvAdapter"></variable>
+
+        <variable
+            name="book2Model"
+            type="com.cosplay.kotlin.hw.mvvm2.viewmodel.BookViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/id_cons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ccc"
+            android:gravity="center"
+            android:text="@{book2Model.name}"
+            android:textColor="#000"
+            app:layout_constraintLeft_toLeftOf="@id/id_cons"
+            app:layout_constraintRight_toRightOf="@id/id_cons"
+            app:layout_constraintTop_toTopOf="@id/id_cons" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/id_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/id_cons"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

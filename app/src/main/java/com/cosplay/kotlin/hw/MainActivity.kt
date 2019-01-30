@@ -12,6 +12,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.cosplay.kotlin.hw.mvvm.view.MVVM1Activity
+import com.cosplay.kotlin.hw.mvvm2.Mvvm2Activity
 import com.cosplay.kotlin.hw.ui.activity.*
 import com.cosplay.kotlin.hw.ui.adapter.MainRvAp
 import com.cosplay.kotlin.hw.util.DeviceUtils
@@ -146,14 +148,42 @@ class MainActivity : Activity() {
             22 -> {
                 intent.setClass(context, TTdensityActivity::class.java)
             }
+            23 -> {
+                intent.setClass(context, LoadingAnimationActivity::class.java)
+            }
+            24 -> {
+                intent.setClass(context, TextviewActivity::class.java)
+            }
+            25 -> {
+                intent.setClass(context, ImmersionActivity::class.java)
+            }
+            26 -> {
+                intent.setClass(context, ObserverableMode::class.java)
+            }
+            27 -> {
+                intent.setClass(context, MVVM1Activity::class.java)
+            }
+            28 -> {
+                intent.setClass(context, SetlayoutparamsActivity::class.java)
+            }
+            29 -> {
+                intent.setClass(context, Mvvm2Activity::class.java)
+            }
+            30 -> {
+                intent.setClass(context, ExecutorSchedulerActivity::class.java)
+            }
+            31 -> {
+                intent.setClass(context, ChangeIconActivity::class.java)
+            }
+            32 -> {
+                intent.setClass(context, SmartRefreshActivity::class.java)
+            }
             else -> {
                 intent.setClass(context, MainActivity::class.java)
             }
             //88888888888888888888888888888
         }
         startActivity(intent)
-
-
     }
 
 
@@ -186,6 +216,16 @@ class MainActivity : Activity() {
         dataList.add("第21题-----微信的指纹识别库 ")
         dataList.add("第22题-----部分文字实现点击事件 ")
         dataList.add("第23题-----头条适配 ")
+        dataList.add("第24题-----加载动画的库loadingdrawable")
+        dataList.add("第25题-----textview的截断")
+        dataList.add("第26题-----immersionbar")
+        dataList.add("第27题-----观察者模式传值")
+        dataList.add("第28题-----mvvm")
+        dataList.add("第29题-----setlayoutparams")
+        dataList.add("第30题-----mvvm2")
+        dataList.add("第31题-----线程切换")
+        dataList.add("第32题-----更换图标")
+        dataList.add("第33题-----上下拉刷新")
         //定义与事件相关的属性信息
         val eventObject = JSONObject()
         eventObject.put("分类", "手机")

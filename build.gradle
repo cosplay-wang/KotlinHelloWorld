@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+apply from: 'information.gradle'
 buildscript {
     ext.kotlin_version = '1.1.51'
     ext.anko_version='0.10.5'
@@ -14,12 +14,25 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
-
+        //walle多渠道打包插件
+        classpath 'com.meituan.android.walle:plugin:1.1.6'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
     }
 }
 
+
+ext{
+    versionaaName="versionaaName project 1.0.0"
+    versionaaCode="versionaaName project code:1.0.0"
+}
+task helloo {
+    println "${versionaaName}+00000000000000000000000"
+}
 allprojects {
     repositories {
         google()

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bookitemmodel"
+            type="com.cosplay.kotlin.hw.mvvm2.base.OnItemClickListener" />
+        <variable
+            name="book"
+            type="com.cosplay.kotlin.hw.mvvm2.entity.Book.ListBean" />
+
+    </data>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/lin_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="@{() -> bookitemmodel.itemClick(book)}"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{book.self_id}"
+            android:textColor="@color/btg_global_gray"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/btg_global_gray" />
+
+    </LinearLayout>
+</layout>
+

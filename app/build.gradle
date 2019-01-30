@@ -33,8 +33,9 @@ android {
                 bbb: "bbbb"
         ]
 
-        buildConfigField "String","url",'"http://www.baidu.com"'
-        resValue "string","ura","${versionaaName}"
+        buildConfigField "String", "url", '"http://www.baidu.com"'
+        resValue "string", "ura", "${versionaaName}"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -42,21 +43,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
 
+
         }
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
 
+
         }
 
     }
     task hello {
-        println "${versionaaName}--------${nnn}----${abc[0]} -----${promm} ---"+rootProject.ext.android.compileSdkVersion
+        println "${versionaaName}--------${nnn}----${abc[0]} -----${promm} ---" + rootProject.ext.android.compileSdkVersion
     }
     flavorDimensions "default"//这个名字貌似随便取，也可以有多个，总之一定要有..
 
-    productFlavors{
+    productFlavors {
 //        wandoujia{
 //            dimension "default"
 //            applicationId 'om.soubu.walledemo.develop'
@@ -92,6 +95,9 @@ android {
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
+    }
+    dataBinding {
+        enabled = true
     }
 
 
@@ -140,4 +146,11 @@ dependencies {
     implementation 'com.meituan.android.walle:library:1.1.6'
     implementation project(':mylibrary')
     implementation project(':happy-bubble')
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.5"
+
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
 }

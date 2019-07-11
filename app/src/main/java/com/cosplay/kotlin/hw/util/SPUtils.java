@@ -1,6 +1,7 @@
 package com.cosplay.kotlin.hw.util;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 /**
  * Author:wangzhiwei on 2018/11/6.
@@ -12,6 +13,9 @@ public class SPUtils {
     public static final String SP_DENSITY = "DENSITY";
     public static String getString(Context context, String id) {
         return context.getSharedPreferences(SP_FINGER, 0).getString(id, "");
+    }
+    public static SharedPreferences getSP(Context context) {
+        return context.getSharedPreferences(SP_FINGER, 0);
     }
 
 

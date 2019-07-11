@@ -1,6 +1,7 @@
 package com.cosplay.kotlin.hw.mvvm2.base;
 
 import android.arch.lifecycle.MutableLiveData;
+import android.os.MessageQueue;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface BaseLoadListener<T> {
     void loadSuccess(T data);
     void loadFailure(String errorMessage);
     void loadComplete();
+
+
 }

@@ -20,7 +20,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <include
+            app:viewModel="@{bookmodel}"
+            android:id="@+id/mvvm_incudeing"
+            layout="@layout/mvvm_include_layout" />
         <android.support.v7.widget.AppCompatTextView
             android:clickable="true"
             android:id="@+id/my_tv"
@@ -29,7 +32,7 @@
             android:layout_alignParentTop="true"
             android:text="@{bookmodel.name}"
             android:onClick="@{viewModel::click}"
-            android:textColor="@color/btg_global_text_blue"
+
             android:textSize="20sp" />
 
         <android.support.v7.widget.RecyclerView

@@ -12,7 +12,7 @@
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:background="@color/btg_global_gray"
+
         android:id="@+id/tv_change_1"/>
     <TextView
         android:layout_marginTop="10dp"
@@ -22,7 +22,6 @@
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/tv_change_1"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:background="@color/btg_global_gray"
         android:id="@+id/tv_change_2"/>
 
 

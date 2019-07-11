@@ -7,10 +7,6 @@
     <data>
 
         <variable
-            name="adapter"
-            type="com.cosplay.kotlin.hw.mvvm2.adapter.RvAdapter"></variable>
-
-        <variable
             name="book2Model"
             type="com.cosplay.kotlin.hw.mvvm2.viewmodel.BookViewModel" />
     </data>

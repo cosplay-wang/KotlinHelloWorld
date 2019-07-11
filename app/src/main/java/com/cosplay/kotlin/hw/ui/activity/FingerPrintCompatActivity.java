@@ -220,7 +220,6 @@ public class FingerPrintCompatActivity extends AppCompatActivity {
     @TargetApi(23)
     Cipher createCipher(boolean retry) throws Exception
     {
-
             //加密
             Key key = GetKey();
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
@@ -311,6 +310,13 @@ public class FingerPrintCompatActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    public static void main(String[] args) {
+        for (int count = 0; count < 10 ; count++) {
+            System.out.println(count);
+
+        }
     }
 }
 

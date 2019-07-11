@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_collapseMode="pin"
+        android:id="@+id/rl_tutor_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="22dp"
+        android:background="#00ffffff">
+
+        <TextView
+            android:id="@+id/tv_tutor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="口语家教"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/tutor_top_rank"
+            android:layout_width="61dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tutor_top_rank_star_press"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tutor_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/tutor_top_achevement"
+            android:layout_width="61dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tutor_top_achievement_press"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tutor_name"
+            app:layout_constraintRight_toLeftOf="@+id/tutor_top_rank" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

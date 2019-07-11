@@ -24,16 +24,16 @@ public class ChangeIconActivity extends AppCompatActivity implements View.OnClic
       //  ComponentName componentName = getComponentName();
 
         //拿到我们注册的MainActivity组件
-         defaultComponent = new ComponentName(getBaseContext(), "com.cosplay.kotlin.hw.MainActivity");  //拿到默认的组件
-        //拿到我注册的别名test组件
-         test1Component = new ComponentName(getBaseContext(), "com.cosplay.kotlin.hw.icon_tag");
-         test2Component = new ComponentName(getBaseContext(), "com.cosplay.kotlin.hw.icon_tag_1212");
-
-        packageManager = getApplicationContext().getPackageManager();
-        tv1 = findViewById(R.id.tv_change_1);
-        tv2 = findViewById(R.id.tv_change_2);
-        tv1.setOnClickListener(this);
-        tv2.setOnClickListener(this);
+//         defaultComponent = new ComponentName(getBaseContext(), "com.cosplay.kotlin.hw.MainActivity");  //拿到默认的组件
+//        //拿到我注册的别名test组件
+//         test1Component = new ComponentName(getBaseContext(), "com.cosplay.kotlin.hw.icon_tag");
+//         test2Component = new ComponentName(getBaseContext(), "com.cosplay.kotlin.hw.icon_tag_1212");
+//
+//        packageManager = getApplicationContext().getPackageManager();
+//        tv1 = findViewById(R.id.tv_change_1);
+//        tv2 = findViewById(R.id.tv_change_2);
+//        tv1.setOnClickListener(this);
+//        tv2.setOnClickListener(this);
     }
 
     @Override

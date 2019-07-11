@@ -1,27 +1,18 @@
 package com.cosplay.kotlin.hw
 
-import android.animation.AnimatorInflater
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Message
-import android.support.v4.app.NotificationManagerCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.cosplay.kotlin.hw.R.id.kotlin_rv
 import com.cosplay.kotlin.hw.mvvm.view.MVVM1Activity
 import com.cosplay.kotlin.hw.mvvm2.Mvvm2Activity
 import com.cosplay.kotlin.hw.ui.activity.*
 import com.cosplay.kotlin.hw.ui.adapter.MainRvAp
-import com.cosplay.kotlin.hw.util.DeviceUtils
-import com.cosplay.kotlin.hw.util.MetaUtils
 import com.cosplay.kotlin.hw.util.track
-import com.yanzhenjie.permission.AndPermission
-import com.yanzhenjie.permission.R.style.Permission
-import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 
 
@@ -32,28 +23,28 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        getExtras()
-        getDataList()
-        kotlin_rv.layoutManager = LinearLayoutManager(this)
-        kotlin_rv.adapter = MainRvAp(dataList, this, rvItemClick(), rvItemInnerClick())
+      //  getExtras()
+      //  getDataList()
+      //  kotlin_rv.layoutManager = LinearLayoutManager(this)
+     ////   kotlin_rv.adapter = MainRvAp(dataList, this, rvItemClick(), rvItemInnerClick())
         //   var animation = AnimationUtils.loadAnimation(context,R.anim.simple_1)//原有的动画加载方式
-        var animation = AnimatorInflater.loadAnimator(context, R.animator.simple_1)//属性动画的加载方式
-        animation.setTarget(tv_anim)
-        animation.start()
-        if(NotificationManagerCompat.from(this).areNotificationsEnabled()){
-            Log.e("aaa","1111");
-        }else{
-            Log.e("aaa","2222");
-        }
-        Log.e("metaData",MetaUtils.getMetaDataValue(context,"city")+"=---"+resources.getString(R.string.ura));
-
-        var handler:Handler= object :Handler(){
-            override fun handleMessage(msg: Message?) {
-                super.handleMessage(msg)
-            }
-        }
-        DeviceUtils.hasSimCard(context)
-        DeviceUtils.isPad(context)
+      //  var animation = AnimatorInflater.loadAnimator(context, R.animator.simple_1)//属性动画的加载方式
+      //  animation.setTarget(tv_anim)
+     //   animation.start()
+//        if(NotificationManagerCompat.from(this).areNotificationsEnabled()){
+//            Log.e("aaa","1111");
+//        }else{
+//            Log.e("aaa","2222");
+//        }
+//        Log.e("metaData",MetaUtils.getMetaDataValue(context,"city")+"=---"+resources.getString(R.string.ura));
+//
+//        var handler:Handler= object :Handler(){
+//            override fun handleMessage(msg: Message?) {
+//                super.handleMessage(msg)
+//            }
+//        }
+//        DeviceUtils.hasSimCard(context)
+//        DeviceUtils.isPad(context)
 //        handler.postDelayed(Runnable {
 //              startActivity(Intent(context,DialogAActivity::class.java));
 //        },5000)
@@ -178,6 +169,9 @@ class MainActivity : Activity() {
             32 -> {
                 intent.setClass(context, SmartRefreshActivity::class.java)
             }
+            33 -> {
+                intent.setClass(context, CoordinatorActivity::class.java)
+            }
             else -> {
                 intent.setClass(context, MainActivity::class.java)
             }
@@ -226,6 +220,7 @@ class MainActivity : Activity() {
         dataList.add("第31题-----线程切换")
         dataList.add("第32题-----更换图标")
         dataList.add("第33题-----上下拉刷新")
+        dataList.add("第34题-----折叠顶部效果")
         //定义与事件相关的属性信息
         val eventObject = JSONObject()
         eventObject.put("分类", "手机")

@@ -17,7 +17,14 @@ import com.zhuge.analysis.stat.ZhugeSDK
 import com.zhuge.analysis.stat.ZhugeParam
 import org.json.JSONObject
 import android.support.annotation.NonNull
+import android.support.multidex.MultiDex
 import android.util.DisplayMetrics
+import android.widget.Toast
+import com.meituan.android.walle.WalleChannelReader
+import com.tencent.bugly.Bugly
+import com.tencent.bugly.beta.Beta
+import com.tencent.bugly.beta.interfaces.BetaPatchListener
+import java.util.*
 
 
 /**
@@ -36,6 +43,7 @@ class APP : Application() {
         Stetho.initializeWithDefaults(this)
         initZhuge()
         initWeichat()
+        initBuglyTinker()
 
     }
 
@@ -103,7 +111,92 @@ class APP : Application() {
         super.onTerminate()
         SoterWrapperApi.tryStopAllSoterTask()
     }
+    val mDebug = true
+    private fun initBuglyTinker() {
+        // 设置是否开启热更新能力，默认为true
+        Beta.enableHotfix = true
+        // 设置是否自动下载补丁
+        Beta.canAutoDownloadPatch = true
+        // 设置是否提示用户重启
+        Beta.canNotifyUserRestart = true
+        // 设置是否自动合成补丁
+        Beta.canAutoPatch = true
 
+        /**
+         * 补丁回调接口，可以监听补丁接收、下载、合成的回调
+         */
+        Beta.betaPatchListener = object : BetaPatchListener {
+            override
+            fun onPatchReceived(patchFileUrl: String) {
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, patchFileUrl, Toast.LENGTH_SHORT).show()
+                }
+            }
+            override
+            fun onDownloadReceived(savedLength: Long, totalLength: Long) {
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, String.format(Locale.getDefault(),
+                            "%s %d%%",
+                            Beta.strNotificationDownloading,
+                            (if (totalLength == 0L) 0 else savedLength * 100 / totalLength).toInt()), Toast.LENGTH_SHORT).show()
+                }
+            }
+            override
+            fun onDownloadSuccess(patchFilePath: String) {
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, patchFilePath, Toast.LENGTH_SHORT).show()
+                    //                Beta.applyDownloadedPatch();
+                }
+            }
+            override
+            fun onDownloadFailure(msg: String) {
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
+                }
+            }
+            override
+            fun onApplySuccess(msg: String) {
+
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
+                }
+            }
+            override
+            fun onApplyFailure(msg: String) {
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
+                }
+            }
+            override
+            fun onPatchRollback() {
+                if (mDebug) {
+
+                    Toast.makeText(applicationContext, "onPatchRollback", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+        //        long start = System.currentTimeMillis();
+        val channel = WalleChannelReader.getChannel(this.applicationContext)
+        Bugly.setAppChannel(this, channel)
+        // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId,调试时将第三个参数设置为true
+        Bugly.init(applicationContext,
+               "397e413db6e057d7", mDebug)
+    }
+
+    public override fun attachBaseContext(ctx: Context) {
+        super.attachBaseContext(ctx)
+       // MultiDex.install(ctx)
+
+        // 安装bugly-tinker
+        Beta.installTinker()
+    }
 }
 
 

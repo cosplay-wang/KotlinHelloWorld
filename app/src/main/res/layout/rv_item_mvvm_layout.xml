@@ -21,11 +21,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@{book.name}"
-            android:textColor="@color/btg_global_gray"
             android:textSize="20sp" />
 
         <View
-            android:background="@color/btg_global_gray"
             android:layout_width="match_parent"
             android:layout_height="1px" />
 

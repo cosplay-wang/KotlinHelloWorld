@@ -4,9 +4,12 @@ import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.MessageQueue;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.widget.RelativeLayout;
 
 import com.cosplay.kotlin.hw.BR;
 import com.cosplay.kotlin.hw.R;
@@ -18,6 +21,10 @@ import com.cosplay.kotlin.hw.mvvm.viewmodel.BookViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingDeque;
+
+import static android.os.Looper.getMainLooper;
 
 public class MVVM1Activity extends AppCompatActivity{
     RvAdapter rvAdapter;
@@ -50,6 +57,8 @@ public class MVVM1Activity extends AppCompatActivity{
                 dataBinding.setBookmodel(bookEntity);
             }
         });
+
+
     }
 
 

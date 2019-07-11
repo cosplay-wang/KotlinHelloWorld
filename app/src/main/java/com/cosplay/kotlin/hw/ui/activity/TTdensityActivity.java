@@ -31,7 +31,7 @@ public class TTdensityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ttdensity);
         changeDensity();
-        findViewById(R.id.tv_now).setLayoutParams(new LinearLayout.LayoutParams((int) (getResources().getDimension(R.dimen.btg_quick_signin_height)), (int) getResources().getDimension(R.dimen.btg_fab_action_size)));
+      //  findViewById(R.id.tv_now).setLayoutParams(new LinearLayout.LayoutParams((int) (getResources().getDimension(R.dimen.btg_quick_signin_height)), (int) getResources().getDimension(R.dimen.btg_fab_action_size)));
         ((TextView) findViewById(R.id.tv_ori)).setText("原始的density" + getDensity());
         ((TextView) findViewById(R.id.tv_change)).setText("改变density");
 //        findViewById(R.id.tv_ori).setOnClickListener(new View.OnClickListener() {
@@ -44,7 +44,7 @@ public class TTdensityActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ((TextView) findViewById(R.id.tv_change)).setText("改变density：" + changeDensity());
-                findViewById(R.id.tv_now).setLayoutParams(new LinearLayout.LayoutParams((int) (getResources().getDimension(R.dimen.btg_quick_signin_height)), (int) getResources().getDimension(R.dimen.btg_fab_action_size)));
+               // findViewById(R.id.tv_now).setLayoutParams(new LinearLayout.LayoutParams((int) (getResources().getDimension(R.dimen.btg_quick_signin_height)), (int) getResources().getDimension(R.dimen.btg_fab_action_size)));
             }
         });
 

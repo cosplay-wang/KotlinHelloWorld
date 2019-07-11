@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="1000">
+    <!-- 其中toDegrees值越大，转的圈圈越快 -->
+
+    <shape
+        android:innerRadiusRatio="8"
+        android:shape="ring"
+        android:thicknessRatio="16"
+        android:useLevel="false">
+        <gradient
+            android:centerColor="#999999"
+            android:endColor="#666666"
+            android:startColor="#FFFFFF"
+            android:type="sweep" />
+    </shape>
+
+</rotate>

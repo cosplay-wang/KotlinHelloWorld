@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/common_margin_2" />
+    <solid android:color="@color/tutor_main_new_tab_checked" />
+    <size
+        android:width="3dp"
+        android:height="12dp" />
+
+</shape>

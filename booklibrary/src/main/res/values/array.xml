@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="an_left_laugh">
+        <item>@drawable/yibao_ko_success01</item>
+        <item>@drawable/yibao_ko_success02</item>
+        <item>@drawable/yibao_ko_success03</item>
+        <item>@drawable/yibao_ko_success04</item>
+        <item>@drawable/yibao_ko_success05</item>
+        <item>@drawable/yibao_ko_success06</item>
+        <item>@drawable/yibao_ko_success07</item>
+        <item>@drawable/yibao_ko_success08</item>
+        <item>@drawable/yibao_ko_success09</item>
+        <item>@drawable/yibao_ko_success10</item>
+        <item>@drawable/yibao_ko_success11</item>
+        <item>@drawable/yibao_ko_success12</item>
+        <item>@drawable/yibao_ko_success13</item>
+        <item>@drawable/yibao_ko_success14</item>
+        <item>@drawable/yibao_ko_success15</item>
+        <item>@drawable/yibao_ko_success16</item>
+        <item>@drawable/yibao_ko_success17</item>
+        <item>@drawable/yibao_ko_success18</item>
+        <item>@drawable/yibao_ko_success19</item>
+        <item>@drawable/yibao_ko_success20</item>
+        <item>@drawable/yibao_ko_success21</item>
+        <item>@drawable/yibao_ko_success22</item>
+        <item>@drawable/yibao_ko_success23</item>
+    </array>
+
+    <array name="an_left_cry">
+        <item>@drawable/yibao_ko_failure01</item>
+        <item>@drawable/yibao_ko_failure02</item>
+        <item>@drawable/yibao_ko_failure03</item>
+        <item>@drawable/yibao_ko_failure04</item>
+        <item>@drawable/yibao_ko_failure05</item>
+        <item>@drawable/yibao_ko_failure06</item>
+        <item>@drawable/yibao_ko_failure07</item>
+        <item>@drawable/yibao_ko_failure08</item>
+        <item>@drawable/yibao_ko_failure09</item>
+        <item>@drawable/yibao_ko_failure10</item>
+        <item>@drawable/yibao_ko_failure11</item>
+        <item>@drawable/yibao_ko_failure12</item>
+        <item>@drawable/yibao_ko_failure13</item>
+        <item>@drawable/yibao_ko_failure14</item>
+        <item>@drawable/yibao_ko_failure15</item>
+        <item>@drawable/yibao_ko_failure16</item>
+        <item>@drawable/yibao_ko_failure17</item>
+        <!--<item>@drawable/yibao_ko_failure18</item>-->
+        <item>@drawable/yibao_ko_failure19</item>
+        <!--<item>@drawable/yibao_ko_failure20</item>-->
+        <item>@drawable/yibao_ko_failure21</item>
+        <!--<item>@drawable/yibao_ko_failure22</item>-->
+        <item>@drawable/yibao_ko_failure23</item>
+        <!--<item>@drawable/yibao_ko_failure24</item>-->
+        <item>@drawable/yibao_ko_failure25</item>
+        <!--<item>@drawable/yibao_ko_failure27</item>-->
+        <item>@drawable/yibao_ko_failure28</item>
+        <!--<item>@drawable/yibao_ko_failure29</item>-->
+        <item>@drawable/yibao_ko_failure30</item>
+        <!--<item>@drawable/yibao_ko_failure31</item>-->
+        <item>@drawable/yibao_ko_failure32</item>
+        <!--<item>@drawable/yibao_ko_failure33</item>-->
+        <item>@drawable/yibao_ko_failure34</item>
+        <!--<item>@drawable/yibao_ko_failure35</item>-->
+        <item>@drawable/yibao_ko_failure36</item>
+        <!--<item>@drawable/yibao_ko_failure37</item>-->
+        <item>@drawable/yibao_ko_failure38</item>
+        <!--<item>@drawable/yibao_ko_failure39</item>-->
+        <item>@drawable/yibao_ko_failure40</item>
+        <!--<item>@drawable/yibao_ko_failure41</item>-->
+        <item>@drawable/yibao_ko_failure42</item>
+        <!--<item>@drawable/yibao_ko_failure43</item>-->
+        <item>@drawable/yibao_ko_failure44</item>
+        <!--<item>@drawable/yibao_ko_failure45</item>-->
+        <item>@drawable/yibao_ko_failure46</item>
+    </array>
+
+    <array name="an_top_laugh">
+        <item>@drawable/yibao_laugh01</item>
+        <item>@drawable/yibao_laugh02</item>
+        <item>@drawable/yibao_laugh03</item>
+        <item>@drawable/yibao_laugh04</item>
+        <item>@drawable/yibao_laugh05</item>
+        <item>@drawable/yibao_laugh06</item>
+        <item>@drawable/yibao_laugh07</item>
+        <item>@drawable/yibao_laugh08</item>
+        <item>@drawable/yibao_laugh09</item>
+        <item>@drawable/yibao_laugh10</item>
+    </array>
+    <array name="an_top_cry">
+        <item>@drawable/yibaocry01</item>
+        <item>@drawable/yibaocry02</item>
+        <item>@drawable/yibaocry03</item>
+        <item>@drawable/yibaocry04</item>
+        <item>@drawable/yibaocry05</item>
+        <item>@drawable/yibaocry06</item>
+        <item>@drawable/yibaocry07</item>
+        <item>@drawable/yibaocry08</item>
+        <item>@drawable/yibaocry09</item>
+    </array>
+
+    <array name="result_detail">
+        <item>@drawable/up_1</item>
+        <item>@drawable/up_2</item>
+
+    </array>
+</resources>

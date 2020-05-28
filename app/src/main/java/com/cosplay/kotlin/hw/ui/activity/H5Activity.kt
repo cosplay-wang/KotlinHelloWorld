@@ -3,6 +3,7 @@ package com.cosplay.kotlin.hw.ui.activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Bundle
@@ -12,6 +13,9 @@ import android.widget.FrameLayout
 import com.cosplay.kotlin.hw.R
 import kotlinx.android.synthetic.main.activity_h5.*
 import org.jetbrains.anko.toast
+import android.content.Intent.ACTION_VIEW
+import android.net.Uri
+
 
 class H5Activity : AppCompatActivity() {
     private lateinit var h5View: WebView
@@ -20,6 +24,8 @@ class H5Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_h5)
         initH5()
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("ekwingstudent://com.ekwing.students/student/wel?key=mykey"))
+        startActivity(intent)
     }
 
     private fun initH5() {
@@ -52,7 +58,7 @@ class H5Activity : AppCompatActivity() {
 
         //载入网页
 
-        h5View.loadUrl("file:///android_asset/tokeninfo.html")
+        h5View.loadUrl("file:///android_asset/test.html")
 //        h5View.postDelayed(Runnable { kotlin.run {
 //            h5View.loadUrl("javascript:window.tokenInfo={os:'Android',driverCode:'3.4.8',token:'0MTMzMDQ2MSMjMTAyNzgzMTYjI2NmZWQ5NWFhMDVkNmFiZjdkZDE3NTg0YjQwNGFlY2VhIyMzNWE4NjZlOTljY2UwOGYzMGU4MGYzYjZkNGZlMGY3YiMjMTU0NTkwODkxNCMjMiMjMiMjc3R1e',is_http:'0',v:'2.8',uid:'1330461'}")
 //        } },1000)

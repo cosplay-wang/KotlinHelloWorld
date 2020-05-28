@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/yibao_laugh01"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh02"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh03"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh04"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh05"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh06"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh07"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh08"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh09"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/yibao_laugh10"
+        android:duration="50" />
+
+
+</animation-list>

@@ -29,3 +29,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+task makeJar(type:org.gradle.api.tasks.bundling.Jar) {
+    from('build/intermediates/classes/release/')
+    into('build/libs')
+    include('classes.jar')
+    rename('classes.jar','mylibrary.jar')
+}

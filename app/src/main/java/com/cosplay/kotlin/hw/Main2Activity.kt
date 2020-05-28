@@ -14,8 +14,12 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.cosplay.kotlin.hw.R.id.tv_anim
+import com.cosplay.kotlin.hw.datacache.AnswerActivity
+import com.cosplay.kotlin.hw.datacache.NowAnswerActivity
+import com.cosplay.kotlin.hw.inject.InjectActivity
 import com.cosplay.kotlin.hw.mvvm.view.MVVM1Activity
 import com.cosplay.kotlin.hw.mvvm2.Mvvm2Activity
+import com.cosplay.kotlin.hw.ui.Arounter.ArounterActivity
 import com.cosplay.kotlin.hw.ui.activity.*
 import com.cosplay.kotlin.hw.ui.adapter.MainRvAp
 import com.cosplay.kotlin.hw.util.DeviceUtils
@@ -33,7 +37,7 @@ import javax.net.ssl.X509TrustManager
  */
 class Main2Activity : Activity() {
 
-//    var  sHello : String = "qwe"
+    //    var  sHello : String = "qwe"
 //    override fun setContentView(layoutResID: Int) {
 //        super.setContentView(layoutResID)
 //    }
@@ -42,28 +46,28 @@ class Main2Activity : Activity() {
 //        super.onCreate(savedInstanceState)
 //        sHello = "hgda"
 //    }
-lateinit var dataList: MutableList<String>
+    lateinit var dataList: MutableList<String>
     var context: Context = this;
     //  val jjj : int = 1;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-          getExtras()
-          getDataList()
-          kotlin_rv.layoutManager = LinearLayoutManager(this)
-          kotlin_rv.adapter = MainRvAp(dataList, this, rvItemClick(), rvItemInnerClick())
-         //  var animation = AnimationUtils.loadAnimation(context,R.anim.simple_1)//原有的动画加载方式
-          var animation = AnimatorInflater.loadAnimator(context, R.animator.simple_1)//属性动画的加载方式
-          animation.setTarget(tv_anim)
-           animation.start()
-        if(NotificationManagerCompat.from(this).areNotificationsEnabled()){
-            Log.e("aaa","1111");
-        }else{
-            Log.e("aaa","2222");
+        getExtras()
+        getDataList()
+        kotlin_rv.layoutManager = LinearLayoutManager(this)
+        kotlin_rv.adapter = MainRvAp(dataList, this, rvItemClick(), rvItemInnerClick())
+        //  var animation = AnimationUtils.loadAnimation(context,R.anim.simple_1)//原有的动画加载方式
+        var animation = AnimatorInflater.loadAnimator(context, R.animator.simple_1)//属性动画的加载方式
+        animation.setTarget(tv_anim)
+        animation.start()
+        if (NotificationManagerCompat.from(this).areNotificationsEnabled()) {
+            Log.e("aaa", "1111");
+        } else {
+            Log.e("aaa", "2222");
         }
-        Log.e("metaData", MetaUtils.getMetaDataValue(context,"city")+"=---"+resources.getString(R.string.ura));
+        Log.e("metaData", MetaUtils.getMetaDataValue(context, "city") + "=---" + resources.getString(R.string.ura));
 
-        var handler:Handler= object : Handler(){
+        var handler: Handler = object : Handler() {
             override fun handleMessage(msg: Message?) {
                 super.handleMessage(msg)
             }
@@ -88,7 +92,7 @@ lateinit var dataList: MutableList<String>
         override fun onItemInnerClick(v: View, position: Int) {
             Toast.makeText(context, "d点击了" + dataList[position], Toast.LENGTH_SHORT).show()
             skipControlCenter(position)
-            //  startActivity<Main2Activity>("id" to 1,"name" to "kotlin")
+            //  startActivity<NavigationViewActivity>("id" to 1,"name" to "kotlin")
         }
     }
 
@@ -212,15 +216,43 @@ lateinit var dataList: MutableList<String>
             38 -> {
                 intent.setClass(context, ScreenShotActivity::class.java)
             }
+            39 -> {
+                intent.setClass(context, ViewpagerActivity::class.java)
+            }
+            40 -> {
+                intent.setClass(context, ArounterActivity::class.java)
+            }
+            41 -> {
+                intent.setClass(context, beisaierPathActivity::class.java)
+            }
+            42 -> {
+                intent.setClass(context, NavigationActivity::class.java)
+            }
+            43 -> {
+                intent.setClass(context, NavigationViewActivity::class.java)
+            }
+            44 -> {
+                intent.setClass(context, VideoAudioMixActivity::class.java)
+            }
+            45 -> {
+                intent.setClass(context, AudioReplaceActivity::class.java)
+            }
+            46 -> {
+                intent.setClass(context, AnswerActivity::class.java)
+            }
+            47 -> {
+                intent.setClass(context, NowAnswerActivity::class.java)
+            }
+            48 -> {
+                intent.setClass(context, InjectActivity::class.java)
+            }
             else -> {
                 intent.setClass(context, MainActivity::class.java)
             }
-        //88888888888888888888888888888
+            //88888888888888888888888888888
         }
         startActivity(intent)
     }
-
-
 
 
     fun getDataList() {
@@ -266,11 +298,21 @@ lateinit var dataList: MutableList<String>
         dataList.add("第36题-----虹软人脸监测 ")
         dataList.add("第37题-----悬浮界面 ")
         dataList.add("第38题-----截屏操作 ")
+        dataList.add("第39题-----Viewpager ")
+        dataList.add("第40题-----Arouter使用 ")
+        dataList.add("第41题-----画线 ")
+        dataList.add("第42题-----navigation ")
+        dataList.add("第43题-----navigation 实现 radiobutton+ fragment ")
+        dataList.add("第44题----- 音视频提取合成相关 ")
+        dataList.add("第45题----- 音频replace相关 ")
+        dataList.add("第46题----- 答题缓存LiveData")
+        dataList.add("第46题----- 答题缓存 cacheList")
+        dataList.add("第47题----- 注解初试")
         //定义与事件相关的属性信息
         val eventObject = JSONObject()
         eventObject.put("分类", "手机")
         eventObject.put("名称", "iPhone6 plus 64g")
-        track(this,"key1",eventObject)
+        track(this, "key1", eventObject)
     }
 
 

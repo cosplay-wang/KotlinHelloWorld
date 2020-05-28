@@ -7,7 +7,6 @@
     <dimen name="rl_num_question_width">240dp</dimen>
 
 
-
     <!-- 分隔线 【通用】 -->
     <dimen name="divider_line_height">1px</dimen>
     <!--登录主页-->

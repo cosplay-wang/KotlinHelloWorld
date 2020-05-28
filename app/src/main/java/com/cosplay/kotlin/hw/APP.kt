@@ -1,16 +1,14 @@
 package com.cosplay.kotlin.hw
 
 import android.app.Application
+import android.arch.lifecycle.LifecycleOwner
 import android.content.Context
 import android.util.Log
 import com.facebook.stetho.Stetho
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.tencent.smtt.export.external.TbsCoreSettings
 import com.tencent.smtt.sdk.QbSdk
-import com.tencent.soter.wrapper.SoterWrapperApi
-import com.tencent.soter.wrapper.wrap_callback.SoterProcessCallback
-import com.tencent.soter.wrapper.wrap_callback.SoterProcessNoExtResult
-import com.tencent.soter.wrapper.wrap_task.InitializeParam
+
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 import com.zhuge.analysis.stat.ZhugeSDK
@@ -20,6 +18,7 @@ import android.support.annotation.NonNull
 import android.support.multidex.MultiDex
 import android.util.DisplayMetrics
 import android.widget.Toast
+import com.alibaba.android.arouter.launcher.ARouter
 import com.meituan.android.walle.WalleChannelReader
 import com.tencent.bugly.Bugly
 import com.tencent.bugly.beta.Beta
@@ -33,6 +32,7 @@ import java.util.*
  * Description:
  */
 class APP : Application() {
+
     override fun onCreate() {
         super.onCreate()
         instance = this
@@ -44,7 +44,7 @@ class APP : Application() {
         initZhuge()
         initWeichat()
         initBuglyTinker()
-
+        initARouter()
     }
 
     companion object {
@@ -58,7 +58,16 @@ class APP : Application() {
             return okhttpClient
         }
     }
-    fun initZhuge(){
+
+    fun initARouter() {
+       // if (isDebug()) {           // These two lines must be written before init, otherwise these configurations will be invalid in the init process
+            ARouter.openLog();     // Print log
+            ARouter.openDebug();   // Turn on debugging mode (If you are running in InstantRun mode, you must turn on debug mode! Online version needs to be closed, otherwise there is a security risk)
+       // }
+        ARouter.init(this);
+    }
+
+    fun initZhuge() {
         val param = ZhugeParam.Builder()
                 .did("我的id")
                 .build()
@@ -88,29 +97,31 @@ class APP : Application() {
         QbSdk.initX5Environment(getApplicationContext(), cb)
 
     }
-    fun initWeichat(){
-         var param  = InitializeParam.InitializeParamBuilder()
-                .setScenes(0) // 场景值常量，后续使用该常量进行密钥生成或指纹认证
-                .build()
-        SoterWrapperApi.init(this,
-                mGetIsSupportCallback,
-                param)
+
+    fun initWeichat() {
+//        var param = InitializeParam.InitializeParamBuilder()
+//                .setScenes(0) // 场景值常量，后续使用该常量进行密钥生成或指纹认证
+//                .build()
+//        SoterWrapperApi.init(this,
+//                mGetIsSupportCallback,
+//                param)
     }
 
-    private val mGetIsSupportCallback = SoterProcessCallback<SoterProcessNoExtResult> { result ->
-       // DemoLogger.d(TAG, "soterdemo: get is support soter done. result: %s", result.toString())
-        // 建议尽早准备ASK。主要有两个时机：1. 进程初始化时 2. 第一次使用业务任何一个业务时。这里在程序进程初始化的时候准备 ASK
-        //            if(result.errCode == SoterProcessErrCode.ERR_OK && SoterWrapperApi.isSupportSoter()) {
-        //                prepareASK();
-        //            }
-        // Edit 2017.11.27
-        // 不再建议提前生成ASK，可能会拖慢启动。同时极少量机型有兼容性问题，提前生成ASK可能会导致不可预见错误
-    }
+//    private val mGetIsSupportCallback = SoterProcessCallback<SoterProcessNoExtResult> { result ->
+//        // DemoLogger.d(TAG, "soterdemo: get is support soter done. result: %s", result.toString())
+//        // 建议尽早准备ASK。主要有两个时机：1. 进程初始化时 2. 第一次使用业务任何一个业务时。这里在程序进程初始化的时候准备 ASK
+//        //            if(result.errCode == SoterProcessErrCode.ERR_OK && SoterWrapperApi.isSupportSoter()) {
+//        //                prepareASK();
+//        //            }
+//        // Edit 2017.11.27
+//        // 不再建议提前生成ASK，可能会拖慢启动。同时极少量机型有兼容性问题，提前生成ASK可能会导致不可预见错误
+//    }
 
     override fun onTerminate() {
         super.onTerminate()
-        SoterWrapperApi.tryStopAllSoterTask()
+       // SoterWrapperApi.tryStopAllSoterTask()
     }
+
     val mDebug = true
     private fun initBuglyTinker() {
         // 设置是否开启热更新能力，默认为true
@@ -133,6 +144,7 @@ class APP : Application() {
                     Toast.makeText(applicationContext, patchFileUrl, Toast.LENGTH_SHORT).show()
                 }
             }
+
             override
             fun onDownloadReceived(savedLength: Long, totalLength: Long) {
                 if (mDebug) {
@@ -143,6 +155,7 @@ class APP : Application() {
                             (if (totalLength == 0L) 0 else savedLength * 100 / totalLength).toInt()), Toast.LENGTH_SHORT).show()
                 }
             }
+
             override
             fun onDownloadSuccess(patchFilePath: String) {
                 if (mDebug) {
@@ -151,6 +164,7 @@ class APP : Application() {
                     //                Beta.applyDownloadedPatch();
                 }
             }
+
             override
             fun onDownloadFailure(msg: String) {
                 if (mDebug) {
@@ -158,6 +172,7 @@ class APP : Application() {
                     Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
                 }
             }
+
             override
             fun onApplySuccess(msg: String) {
 
@@ -166,6 +181,7 @@ class APP : Application() {
                     Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
                 }
             }
+
             override
             fun onApplyFailure(msg: String) {
                 if (mDebug) {
@@ -173,6 +189,7 @@ class APP : Application() {
                     Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
                 }
             }
+
             override
             fun onPatchRollback() {
                 if (mDebug) {
@@ -187,16 +204,18 @@ class APP : Application() {
         Bugly.setAppChannel(this, channel)
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId,调试时将第三个参数设置为true
         Bugly.init(applicationContext,
-               "397e413db6e057d7", mDebug)
+                "397e413db6e057d7", mDebug)
     }
 
     public override fun attachBaseContext(ctx: Context) {
         super.attachBaseContext(ctx)
-       // MultiDex.install(ctx)
+        // MultiDex.install(ctx)
 
         // 安装bugly-tinker
         Beta.installTinker()
     }
+
+
 }
 
 

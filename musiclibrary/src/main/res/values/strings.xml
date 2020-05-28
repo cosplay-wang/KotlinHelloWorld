@@ -1,0 +1,68 @@
+<resources>
+    <string name="music_app_name">music</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_frag_name">Firstfragment</string>
+    <string name="first_radio_name">学习中心</string>
+    <string name="second_frag_name">Secondfragment</string>
+    <string name="second_radio_name">口语家教</string>
+    <string name="frag_loading">网络数据请求加载中</string>
+    <string name="frag_loading_finish">网络数据请求完成</string>
+    <string name="thrid_frag_name">ThirdFragment</string>
+    <string name="four_frag_name">Fourfragment</string>
+    <string name="click_net">点击发送网络请求</string>
+    <string name="native_2_js">调用js函数</string>
+    <string name="text_sure">确定</string>
+    <string name="item_pk_detail_finish">完成</string>
+
+
+    <string name="setting">Setting</string>
+    <string name="resume">Resume</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="successfully">Successful</string>
+    <string name="failure">Failure</string>
+
+    <string name="permission_camera">Camera</string>
+    <string name="permission_contact">Contact</string>
+    <string name="permission_location">Location</string>
+
+    <string name="permission_calendar">Calendar</string>
+    <string name="permission_microphone">Microphone</string>
+    <string name="permission_storage">Storage</string>
+
+    <string name="permission_phone">Phone</string>
+    <string name="permission_sensors">Sensors</string>
+    <string name="permission_sms">SMS</string>
+
+    <string name="permission_setting">Permission Setting</string>
+    <string name="permission_install">Install Apk</string>
+    <string name="permission_overlay">AlertWindow</string>
+
+    <string name="title_dialog">Tips</string>
+    <string name="message_permission_rationale">Grant the following permissions to continue the program:\n\n%1$s</string>
+    <string name="message_permission_always_failed">Please give us permission in the settings:\n\n%1$s</string>
+    <string name="message_setting_comeback">The user comes back from the settings page.</string>
+
+    <string name="message_install_failed">Your phone is not allowed us to install apps.</string>
+
+    <string name="message_overlay_failed">Your phone is not allowed us to draw on other applications.</string>
+
+    <string name="message_error_storage">Please check the external storage device.</string>
+    <string name="textview_show">Please check the external storage device.</string>
+
+    <string name="person_intro">
+        晓晓，1985年4月22日出生于重庆渝中区，主持人、演员，毕业于中国传媒大学播音与主持专业04级本科班。
+        2007年进入湖南娱乐频道，主持娱乐节目《娱乐急先锋》。在《挑战麦克风》、《节节高声》、《快乐女声》等众多节目担任主持。
+        2010年与马天宇主演《宝贝妈妈宝贝女》。2011年与郑恺、魏巍主演《我的青春在延安》。
+        2013年10月4日，与沈怡、袁弘主演《真爱惹麻烦》，2013年9月28日与张翰、郑爽主演《胜女的代价2》 。
+        2015年5月11日，李响单膝跪地求婚孙骁骁，孙骁骁飙泪点头。
+        演绎经历:
+        2007年4月底，孙骁骁通过湖南电视台娱乐频道在中国传媒大学的招聘并往长沙进行复试。通过复试后孙骁骁开始主持娱乐资讯类节目《娱乐急先锋》。
+        2008年11月，孙骁骁接到了一个内部电话，这个电话来自湖南卫视演艺事业部，对方询问她是否愿意到湖南卫视做一档新节目。这档节目，就是《挑战麦克风》。《挑战麦克风》选中孙骁骁和马可、李好搭档，其实是看中了她的麦霸功底。
+        2009年3月2日，在湖南卫视正式开播的《节节高声》栏目由孙骁骁和曹颖搭档。2009年03月12日，湖南卫视《挑战麦克风》第二季启播暨节目模式外销签约仪式在湖南国际影视会展中心举办。
+        2011年6月，由孙骁骁、郑恺等主演的红色青春偶像剧《我的青春在延安》正式上映，献礼建党90周年。
+        2013年10月20日，由欢瑞世纪出品，明道工作室制作，孙骁骁、张翰、郑爽、乔任梁、江语晨等主演的电视剧《胜女的代价2》在湖南卫视第一周播剧场收官。2013年12月6日由林心如、袁弘、孙骁骁等主演的古装巨制《秀丽江山之长歌行》杀青。同年与黄宗泽、戚薇等主演《少年神探狄仁杰》。
+        2015年，主演《新济公活佛》中的单元剧《驭夫环》。</string>
+</resources>

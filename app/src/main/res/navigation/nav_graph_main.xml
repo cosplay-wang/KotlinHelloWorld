@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/page3Fragment">
+
+    <fragment
+        android:id="@+id/page1Fragment"
+        android:name="com.cosplay.kotlin.hw.ui.fragment.navigation.FragmentA"
+        android:label="fragment_page1"
+        tools:layout="@layout/navigation_a_fragment">
+        <action
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            android:id="@+id/action_page2"
+            app:destination="@id/page2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/page2Fragment"
+        android:name="com.cosplay.kotlin.hw.ui.fragment.navigation.FragmentB"
+        android:label="fragment_page2"
+        tools:layout="@layout/navigation_a_fragment">
+        <action
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            android:id="@+id/action_page1"
+            app:popUpTo="@id/page1Fragment" />
+        <action
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            android:id="@+id/action_page3"
+            app:destination="@id/page3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page3Fragment"
+        android:name="com.cosplay.kotlin.hw.ui.fragment.navigation.FragmentC"
+        android:label="fragment_page3"
+        tools:layout="@layout/navigation_a_fragment">
+        <action
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            android:id="@+id/action_page2"
+            app:popUpTo="@id/page2Fragment" />
+        <action
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            android:id="@+id/action_page1"
+            app:destination="@id/page1Fragment" />
+    </fragment>
+
+</navigation>

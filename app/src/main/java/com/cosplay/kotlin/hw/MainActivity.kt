@@ -63,7 +63,7 @@ class MainActivity : Activity() {
         override fun onItemInnerClick(v: View, position: Int) {
             Toast.makeText(context, "d点击了" + dataList[position], Toast.LENGTH_SHORT).show()
             skipControlCenter(position)
-            //  startActivity<Main2Activity>("id" to 1,"name" to "kotlin")
+            //  startActivity<NavigationViewActivity>("id" to 1,"name" to "kotlin")
         }
     }
 

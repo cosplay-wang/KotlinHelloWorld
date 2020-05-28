@@ -6,6 +6,7 @@ buildscript {
     ext.aaa = '26.1.0'
     ext.lottieVersion = '2.6.0'
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
         mavenCentral()
@@ -15,7 +16,7 @@ buildscript {
       //  classpath"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
        // classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-        classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
+      //  classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
         //walle多渠道打包插件
         classpath 'com.meituan.android.walle:plugin:1.1.6'
         // NOTE: Do not place your application dependencies here; they belong
@@ -37,14 +38,19 @@ task helloo {
 }
 allprojects {
     repositories {
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
         mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven { url 'https://dl.bintray.com/umsdk/release' }
+//        maven { url 'http://localhost:8081/repository/maven-public/' }
+//        maven { url "https://jitpack.io" }
+//        maven { url 'https://dl.bintray.com/umsdk/release' }
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+
+
+
+
+
+

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="radio_check">#fff</color>
+    <color name="radio_no_check">#ccc</color>
+    <color name="ek_main_task_ed_color">#ffc438</color>
+    <color name="ek_main_task_exp_color">#a0dd1d</color>
+    <color name="paint1_color">#ffffff</color>
+    <color name="paint2_color">#ccffffff</color>
+    <color name="paint3_color">#80ffffff</color>
+
+
+        <!--主题色 【通用】-->
+        <color name="colorPrimary">#05c3f9</color>
+        <color name="colorPrimaryPressed">#82e1fc</color>
+        <color name="colorPrimaryGrey">#8082e1fc</color>
+        <color name="colorMain">#3eccf5</color>
+        <color name="colorMainPrimary">#fff178</color>
+        <color name="colorCenterCheck">#c26400</color>
+        <color name="colorCenterNormal">#784207</color>
+        <color name="colorMain_click">#7f3eccf5</color>
+
+        <color name="color_main_check">#59CFF0</color>
+
+        <color name="colorForcePhone">#05c3f9</color>
+        <color name="colorForcePhoneClick">#82e1fc</color>
+        <color name="colorStrokeText">#58daff</color>
+
+        <!--登录模块-->
+        <color name="login_item_text">#3eccf5</color>
+        <color name="login_title_bg">#b0ecff</color>
+
+        <color name="good_for_eyes_color_test">#33A7943E</color>
+
+        <color name="exercise_text_line_color">#ffaa00</color>
+        <color name="submit_normal">#333333</color>
+        <color name="submit_press">#a6a6a6</color>
+        <!--设置界面：退出登录按钮字体色值-->
+        <color name="exit_submit_normal">#ff4444</color>
+        <color name="exit_submit_press">#faabab</color>
+
+        <!-- 进度颜色 -->
+        <color name="hw_find_item_right_bg">#eaf8e9</color>
+        <color name="hw_find_item_error_bg">#ffeeee</color>
+        <color name="hw_process_orange">#ffd744</color>
+        <color name="custom_bg">#eeeeee</color>
+        <color name="hint_color">#cecece</color>
+        <color name="custom_text_color_3">#333333</color>
+        <color name="custom_text_color_3_half">#80333333</color>
+        <color name="custom_text_color_6">#666666</color>
+        <color name="custom_text_color_9">#999999</color>
+        <color name="custom_text_color_95">#959595</color>
+        <color name="custom_text_color_c4">#c4c4c4</color>
+        <color name="text_b9">#b9b9b9</color>
+        <color name="custom_btn_normal">#ffd744</color>
+        <color name="custom_btn_press">#ffeba1</color>
+        <color name="custom_btn_press1">#bfab61</color>
+        <color name="custom_frame_orange">#ffaa00</color>
+        <color name="custom_bottom_color">#f9f9f9</color>
+        <color name="custom_grey_color_c9">#c9c9c9</color>
+        <color name="custom_line">#cccccc</color>
+        <color name="custom_line2">#e5e5e5</color>
+        <color name="custom_line3">#c5c5c5</color>
+        <color name="custom_line4">#f0f0f0</color>
+        <color name="custom_line6">#dddddd</color>
+        <color name="custom_line7">#ececec</color>
+        <color name="custom_line8_e">#eeeeee</color>
+        <color name="custom_theme_color">#ffd744</color>
+        <color name="custom_title_color">#f5f5f5</color>
+        <color name="confirm_green">#48d53d</color>
+        <color name="confirm_red">#ff4444</color>
+        <color name="confirm_selected">#ffaa00</color>
+        <color name="color_item_press">#f5f5f5</color>
+        <color name="color_item_normal">#ffffff</color>
+        <color name="psw_text_press">#bcbcbc</color>
+        <color name="tel_text_press">#ffd47f</color>
+        <color name="custom_orange">#ffaa00</color>
+        <color name="custom_orange_press">#ffd47f</color>
+        <!-- 头像背景颜色 -->
+        <!-- 头像背景颜色 2.7.0 -->
+        <color name="head_circle_bg_color_new">#FFFFFF</color>
+        <!-- 當前最好成績顏色 -->
+        <color name="great_score_color">#ff5959</color>
+        <color name="custom_text_press">#ada072</color>
+        <color name="ekwing_part_process_bg1">#cacaca</color>
+        <color name="ekwing_part_process_bg2">#fec629</color>
+        <color name="custom_orange_btn_press">#ffd7a3</color>
+        <color name="free_look_co_press">#b69b3d</color>
+        <color name="login_press">#ffbe23</color>
+        <color name="ekwing_shade_bg">#8a000000</color>
+        <!-- 按要求读词一二  选词状态颜色值 -->
+        <!-- 默认色 -->
+        <color name="tv_press_a9a9a9">#a9a9a9</color>
+        <color name="grammer_normal_bg_f5f5f5">#f5f5f5</color>
+        <color name="grammer_press_bg_fafafa">#fafafa</color>
+        <color name="grammer_stroke_normal_line_cecece">#cecece</color>
+        <color name="grammer_stroke_press_line_e6e6e6">#e6e6e6</color>
+        <!-- 选错背景色 -->
+        <!-- 没有选出 对的 背景色 -->
+        <color name="tv_red_ff4444_bg">#ff4444</color>
+        <!-- 选对的 背景色 -->
+        <!-- 选错字体色 -->
+        <!-- 读词一二 未选择状态的词的背景边框色 -->
+        <!-- 被退回 标签 吧背景色 -->
+        <color name="tv_return_bg_color">#FF7575</color>
+        <color name="seek_progress_color">#B2EF2F</color>
+        <color name="floating_line_color">#70cbf6</color>
+
+        <!-- 配音题型进度条北京 -->
+        <color name="seek_progress_background">#4dffffff</color>
+
+        <!-- vip center vip按钮字体颜色 -->
+        <color name="vip_center_vip_btn_normal">#FF4747</color>
+        <color name="vip_center_vip_btn_focus">#FFB2B2</color>
+        <color name="vip_center_bottom_bg_left">#F8F8F8</color>
+        <color name="vip_center_bottom_bg_right_normal">#ff9900</color>
+        <color name="vip_center_bottom_bg_right_focus">#ffcc7f</color>
+        <color name="vip_center_bottom_text_right_focus">#AB9D70</color>
+        <color name="vip_center_list_frame">#DEDEDE</color>
+        <color name="vip_center_back_click">#ADADAD</color>
+        <color name="vip_order_list_line">#EFEFEF</color>
+        <color name="vip_order_pay_success">#FFAA00</color>
+        <color name="hw_again_normal_color">#B2EF2F</color>
+        <color name="hw_again_press_color">#D5F393</color>
+        <color name="hw_again_tv_press_color">#A6AE95</color>
+
+        <!-- h5进度条 -->
+        <color name="detail_item_left_line_yellow_color">#FFD73C</color>
+        <color name="line_bottom_PK">#ffd744</color>
+
+        <!-- 选课颜色 -->
+        <color name="item_stage_selected">#ffaa00</color>
+        <color name="item_stage_normal">#999999</color>
+
+        <!-- 已达标字体颜色 -->
+
+        <!-- 错 -->
+        <color name="sentence_error_press">#FFEEEE</color>
+        <!-- 对 -->
+        <color name="sentence_right_press">#EAF8E9</color>
+        <color name="tutor_progress_bar_color">#FF848484</color>
+        <color name="tutor_progress_bar_color_back">#CC000000</color>
+        <color name="hw_item_selected_bg">#e5f7ff</color>
+        <!--<color name="hw_common_red">#ff5959</color>
+        <color name="hw_common_green">#48D53D</color>-->
+        <color name="hw_common_red">#ff7575</color>
+        <color name="hw_common_green">#39c35a</color>
+        <color name="hw_pop_selected">#ffaa00</color>
+        <color name="hw_mode_pop_line">#f6f6f6</color>
+        <color name="hw_bottom_bg">#f5f5f5</color>
+        <color name="user_divider_lv">#d4d4d4</color>
+        <color name="user_input_school_et">#b0b0b0</color>
+        <color name="common_bg">#efefef</color>
+        <color name="common_green">#48d53d</color>
+        <color name="common_red">#FF5959</color>
+        <color name="item_grey_bg">#f5f5f5</color>
+        <color name="item_con_press">#f5f5f5</color>
+        <color name="normal_bg">#ffffff</color>
+        <color name="dialog_color">#ffffffff</color>
+        <color name="no_color">#00ffffff</color>
+        <color name="item_normal">#ffff</color>
+        <color name="white">#ffffff</color>
+        <color name="white_half">#80ffffff</color>
+        <color name="white_press">#bcdaff</color>
+        <color name="article_item_bg">#f0efef</color>
+        <color name="exercise_confirm_normal">#ff906d</color>
+        <color name="exercise_confirm_normal1">#ff7b50</color>
+        <color name="exercise_confirm_press">#fe7247</color>
+        <color name="base_blue">#3ebde0</color>
+        <color name="dialog_bg">#0000</color>
+        <!-- <color name="green_read">#48d53d</color> -->
+        <!-- <color name="red_read">#ff4444</color> -->
+
+        <!-- <color name="calendar_event_selected_text_color">#ff000000</color> -->
+        <!-- <color name="calendar_event_text_color">#ffffffff</color> -->
+        <!-- <color name="selection">#ffffaa00</color> -->
+        <!-- <color name="pressed">#fffab400</color> -->
+        <!-- #ff404040 -->
+        <!-- #ff404040 -->
+        <!-- #ff404040 -->
+        <!-- #ff595959 -->
+        <color name="month_other_month">#e2e2e2</color>
+        <!-- #FFDDDDDD -->
+
+        <!-- 以下为增加颜色 -->
+        <color name="press">#f8f8f8</color>
+        <color name="gray">#d9d8d8</color>
+
+        <color name="blue">#0000ff</color>
+
+        <!-- 重读一次 按钮的背景颜色 -->
+        <!-- 完成 按钮的背景颜色 -->
+        <color name="custom_eb_6_color_c9">#ebebeb</color>
+        <color name="answer_bg">#eeeeee</color>
+        <!--<color name="answer_score_color_bg">#46c3ff</color>
+        <color name="hw_common_blue">#46c3ff</color>-->
+        <color name="answer_score_color_bg">#05c3f9</color>
+        <color name="hw_common_blue">#18b6f7</color>
+        <color name="item_hw_color_bg">#E5F7FF</color>
+        <color name="clipping_layer_color">#b3000000</color>
+        <!-- 不透明度的70% -->
+
+        <color name="clip_tv_press_color">#a3a3a3</color>
+        <color name="selected_course_bg">#00000000</color>
+        <color name="transparent">#00000000</color>
+
+
+        <color name="hw_ss_press_test">#ad933c</color>
+        <color name="hw_ss_rank_press">#c3c3c3</color>
+        <color name="hw_result_rating_press">#ffb1b1</color>
+        <color name="wtb_ability_press">#ad933c</color>
+        <color name="vip_animation_validity_text1">#c47400</color>
+        <color name="vip_animation_validity_text2">#9b5c00</color>
+
+        <!--彩旗榜标题颜色-->
+
+        <!-- 配音题型 -->
+        <color name="normal_yellow">#ffd744</color>
+        <color name="pressed_yellow">#ffeba1</color>
+        <color name="text_black_pressed">#ad933c</color>
+        <color name="text_black_pressed_setting">#718f99</color>
+        <!--口语家教 首页-->
+        <color name="tutor_title_pk_bg">#704635</color>
+        <color name="tutor_title_text_color">#523a26</color>
+
+        <!--口语家教 结果页-->
+        <color name="tutor_submit_success_bg">#51c2e2</color>
+        <color name="tutor_submit_fail_bg">#757575</color>
+
+        <!--PK 结果页-->
+        <color name="pk_back_color">#1CCDE1</color>
+        <color name="pk_circle1">#17acbd</color>
+        <color name="pk_circle2">#1ccde1</color>
+        <color name="pk_circle3">#31d9ec</color>
+        <color name="pk_credit_num">#ffba13</color>
+        <color name="pk_exp_num">#7cd315</color>
+        <color name="pk_lose_score">#ff5a5a</color>
+        <color name="pk_win_score">#f2ff27</color>
+
+        <!--翼课学院词汇记忆-->
+        <color name="ek_map_lock">#bebdbd</color>
+        <color name="ek_map_bg_color">#1ccde1</color>
+        <color name="ek_map_exercise_color">#fed203</color>
+
+
+        <!--翼课学院趣味配音-->
+        <color name="ek_bg_half_translucent">#44000000</color>
+
+        <!--个人中心-绑定家长-->
+        <color name="btn_del_parent_pressed">#ffacac</color>
+
+        <color name="ek_tutor_change_color">#b9b9b9</color>
+
+        <color name="ek_task_finish_hint_color">#774c1d</color>
+        <color name="tutor_top_back_color">#b0ecff</color>
+        <color name="user_head_text_color">#784207</color>
+        <color name="user_body_item_color">#52d3fd</color>
+        <color name="user_body_text_press">#99e5fe</color>
+        <color name="user_main_bg">#52d3fd</color>
+        <color name="vip_service_present">#f14a2a</color>
+        <color name="vip_none_bg">#e6e4e4</color>
+        <color name="vip_center_right">#a5e2fc</color>
+
+        <color name="exam_blue">#18B6F7</color>
+
+        <!--智能刷题-->
+        <color name="dialog_head_hint_color">#ffc438</color>
+        <color name="vip_center_pay_bt">#ffe6c6</color>
+        <color name="brush_num_today">#f8ff44</color>
+        <color name="vip_pay_help_bt">#a4e2fc</color>
+        <color name="color_08b2c5">#08b2c5</color>
+        <color name="color_a7dcfb">#a7dcfb</color>
+
+        <!--影视片段-->
+        <color name="right_answer_color">#39c35a</color>
+        <color name="wrong_answer_color">#ff7575</color>
+        <color name="user_answer_color">#ffaa00</color>
+
+        <!--智慧课堂 wisdom-->
+        <color name="wisdom_history_btn_bg">#92d5ff</color>
+        <color name="wisdom_history_btn_text">#0095f5</color>
+        <color name="wisdom_enter_class">#5cc5ff</color>    <!--找读目标语新手引导-->
+        <color name="guid_find_color">#666666</color>
+        <color name="fix_bule_color">#58daff</color>
+        <!--当EditText为空时  bt颜色-->
+        <color name="bt_state_color">#4c05c3f9</color>
+        <color name="custom_color_774c1d">#774c1d</color>
+        <color name="custom_color_ffc438">#ffc438</color>
+        <color name="custom_color_8ac4ff">#8ac4ff</color>
+
+        <color name="color_18b6f7">#18B6F7</color>
+        <color name="color_18b6f7_half">#8018B6F7</color>
+        <color name="color_cecece">#cecece</color>
+        <color name="color_0a94ff">#0a94ff</color>
+        <color name="color_000000">#000000</color>
+        <color name="color_52d7f7">#52d7f7</color>
+        <color name="color_f8ffac">#f8ffac</color>
+        <color name="color_ff9567">#ff9567</color>
+        <color name="color_d58221">#d58221</color>
+
+
+        <!--绘本阅读-->
+        <color name="picture_book_check_grade">#693f0e</color>
+        <color name="picture_book_btn_again">#05c3f9</color>
+        <color name="picture_book_btn_pre">#ff9567</color>
+        <color name="picture_book_btn_pre_notouch">#cecece</color>
+        <color name="picture_book_line">#e0c3a7</color>
+
+
+        <color name="keyword_title">#884a20</color>
+        <color name="keyword_start">#fffefe</color>
+        <color name="keyword_item_normal">#fff2e6</color>
+        <color name="keyword_item_check">#fedfbe</color>
+        <color name="keyword_item_word">#693f0e</color>
+        <color name="keyword_item_allword">#936024</color>
+        <color name="keyword_goread_stroke">#def8ff</color>
+        <color name="color_fff2e6">#fff2e6</color>
+        <!--单元列表-->
+        <color name="unit_color">#707B81</color>
+        <color name="unit">#59cff0</color>
+        <color name="unit_press">#8059cff0</color>
+        <color name="unit_list_book_title">#74A3F9</color>
+
+
+        <!--新的待完成页面-->
+        <color name="unfinish_back">#f1f5f8</color>
+        <color name="unfinish_tab_select_color">#73D5F2</color>
+        <color name="unfinish_item_name">#707B81</color>
+        <color name="unfinish_item_name_check">#80707B81</color>
+        <color name="unfinish_item_progress_name">#828D93</color>
+        <color name="unfinish_item_progress_value">#59CFF0</color>
+        <color name="unfinish_item_line">#f1f5f8</color>
+        <color name="study_target_score_color">#28A1FE</color>
+
+
+        <color name="tutor_main_new_tab">#707B81</color>
+        <color name="readaretical_press">#c0c4c6</color>
+        <color name="tutor_main_new_tab_checked">#73D5F2</color>
+        <color name="tutor_choose_book">#edf5ff</color>
+        <color name="tutor_choose_book_name">#74A3F9</color>
+        <color name="tutor_choose_book_name_press">#b7cefc</color>
+        <color name="tutor_aretical_read_btn">#59CFF0</color>
+        <color name="tutor_line">#F1F5F8</color>
+        <color name="tutor_done">#35EC98</color>
+        <color name="tutor_xl_item_back_one_start">#6F94FF</color>
+        <color name="tutor_xl_item_back_one_end">#87BAFF</color>
+        <color name="tutor_xl_item_back_two_start">#3DB4FF</color>
+        <color name="tutor_xl_item_back_two_end">#71CFFF</color>
+        <color name="tutor_xl_item_back_three_start">#8288FF</color>
+        <color name="tutor_xl_item_back_three_end">#9AA4FF</color>
+        <color name="funny_part_list_bottom_more">#E6ffffff</color>
+        <color name="tutor_tab_shadow_start_color">#00ffffff</color>
+        <color name="tutor_tab_shadow_end_color">#ffffff</color>
+        <color name="paser_tv_color">#05C3F9</color>
+        <color name="textcolor_normal">#707B81</color>
+        <color name="hint_eyeprotect">#ABB5BC</color>
+
+        <color name="color_80000000">#80000000</color>
+        <color name="color_ff59cff0">#ff59cff0</color>
+        <color name="color_707B81">#707B81</color>
+        <color name="color_828d93">#828d93</color>
+        <color name="color_ABB5BC">#ABB5BC</color>
+    </resources>
+

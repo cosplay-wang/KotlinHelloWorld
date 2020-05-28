@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="rl_pk_success_pk_top_margin">71dp</dimen>
+    <dimen name="rl_pk_success_pk_height">145dp</dimen>
+    <dimen name="rl_pk_success_pk_left_width">328dp</dimen>
+    <dimen name="rl_num_question_width">240dp</dimen>
+
+
+
+    <!-- 分隔线 【通用】 -->
+    <dimen name="divider_line_height">1px</dimen>
+    <!--登录主页-->
+    <dimen name="login_topbar_height">43dp</dimen>
+    <dimen name="login_et_width">269dp</dimen>
+    <dimen name="login_et_height2">46dp</dimen>
+    <dimen name="login_pager_margin_top">35dp</dimen>
+    <dimen name="login_et_margin_top">15dp</dimen>
+    <dimen name="login_et_padding">19dp</dimen>
+    <dimen name="login_btn_left_right_margin">40dp</dimen>
+    <dimen name="login_et_height">46dp</dimen>
+    <dimen name="login_margin_top">15dp</dimen>
+    <dimen name="login_main_top">12dp</dimen>
+    <dimen name="login_main_top2">46dp</dimen>
+    <dimen name="login_btn_top">28dp</dimen>
+    <dimen name="login_et_margin">15dp</dimen>
+    <dimen name="login_main_small_persion_top">46dp</dimen>
+    <dimen name="login_main_btn_margin1">80dp</dimen>
+    <dimen name="login_main_btn_margin2">44dp</dimen>
+    <dimen name="user_name_top">12dp</dimen>
+    <dimen name="user_e_e_f_top">20dp</dimen>
+    <dimen name="user_e_e_f_bottom">4dp</dimen>
+    <dimen name="user_avartar_size">70dp</dimen>
+    <dimen name="user_avartar_top">32dp</dimen>
+    <dimen name="study_head_height">800dp</dimen>
+    <dimen name="login_main_center_icon_height">26dp</dimen>
+
+
+    <!--选择学校-->
+    <dimen name="login_et_search_height">31dp</dimen>
+    <dimen name="login_et_search_padding">15dp</dimen>
+
+    <dimen name="record_pading_size">10dp</dimen>
+
+    <!-- pullListcview -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <!-- slidingMenu -->
+    <!-- title height -->
+    <dimen name="title_height">50dp</dimen>
+    <dimen name="title_height_main">45dp</dimen>
+    <dimen name="topbar_height">20dp</dimen>
+
+    <!-- 通用边距 -->
+    <dimen name="custom_bottom_hw_length">64dp</dimen>
+    <dimen name="custom_btn_hw_height">42dp</dimen>
+    <dimen name="part_top_height_dim">16dp</dimen>
+    <dimen name="custom_text_size_16">16sp</dimen>
+    <dimen name="custom_margin12_2">12dp</dimen>
+    <dimen name="custom_margin24_1">24dp</dimen>
+    <dimen name="custom_btn_up_margin_40">40dp</dimen>
+    <dimen name="custom_edittext_height_46">46dp</dimen>
+    <dimen name="custom_margin12_0">12dp</dimen>
+    <dimen name="custom_margin18_0">18dp</dimen>
+    <dimen name="custom_text_size_18">18sp</dimen>
+    <dimen name="custom_text_size_14">14sp</dimen>
+    <dimen name="custom_text_size_12">12sp</dimen>
+    <dimen name="custom_btn_up_margin_32">32dp</dimen>
+    <dimen name="custom_lr_margin_32">32dp</dimen>
+    <dimen name="custom_left_right">12dp</dimen>
+    <dimen name="custom_media_left_right">8dp</dimen>
+    <dimen name="custom_up_down">12dp</dimen>
+    <dimen name="common_margin_8">8dp</dimen>
+    <dimen name="common_margin_5">4.5dp</dimen>
+    <dimen name="common_margin_6">6dp</dimen>
+    <dimen name="common_margin_5_">-5dp</dimen>
+    <dimen name="common_margin_6_">-6dp</dimen>
+    <dimen name="common_margin_4">4dp</dimen>
+    <dimen name="common_margin_2">2dp</dimen>
+    <dimen name="common_margin_3">3dp</dimen>
+    <dimen name="common_margin_1">1dp</dimen>
+    <dimen name="common_margin_9">9dp</dimen>
+    <dimen name="common_margin_10">10dp</dimen>
+    <dimen name="common_margin_11">11dp</dimen>
+    <dimen name="common_margin_12">12dp</dimen>
+    <dimen name="common_margin_13">13dp</dimen>
+    <dimen name="common_margin_14">14dp</dimen>
+    <dimen name="common_margin_15">15dp</dimen>
+    <dimen name="common_margin_16">16dp</dimen>
+    <dimen name="common_margin_17">17dp</dimen>
+    <dimen name="common_margin_18">18dp</dimen>
+    <dimen name="common_margin_19">19dp</dimen>
+    <dimen name="common_margin_20">20dp</dimen>
+    <dimen name="common_margin_21">21dp</dimen>
+    <dimen name="common_margin_22">22dp</dimen>
+    <dimen name="common_margin_24">24dp</dimen>
+    <dimen name="common_margin_25">25dp</dimen>
+    <dimen name="common_margin_27">27dp</dimen>
+    <dimen name="common_margin_28">28dp</dimen>
+    <dimen name="common_margin_30">30dp</dimen>
+    <dimen name="common_margin_32">32dp</dimen>
+    <dimen name="common_margin_36">36dp</dimen>
+    <dimen name="common_margin_40">40dp</dimen>
+    <dimen name="common_margin_44">44dp</dimen>
+    <dimen name="common_margin_48">48dp</dimen>
+    <dimen name="common_margin_50">50dp</dimen>
+    <dimen name="common_margin_55">55dp</dimen>
+    <dimen name="common_margin_61">61dp</dimen>
+    <dimen name="common_margin_60">60dp</dimen>
+    <dimen name="common_margin_65">65dp</dimen>
+    <dimen name="common_margin_70">70dp</dimen>
+    <dimen name="common_margin_78">78dp</dimen>
+    <dimen name="common_margin_81">81dp</dimen>
+    <dimen name="common_margin_90">90dp</dimen>
+    <dimen name="common_margin_98">98dp</dimen>
+    <dimen name="common_margin_104">104dp</dimen>
+    <dimen name="common_margin_117">117dp</dimen>
+    <dimen name="common_margin_115">115dp</dimen>
+    <dimen name="common_margin_127">127dp</dimen>
+    <dimen name="common_margin_137">137dp</dimen>
+    <dimen name="common_margin_131">131dp</dimen>
+    <dimen name="common_margin_155">155dp</dimen>
+    <dimen name="common_margin_161">161dp</dimen>
+    <dimen name="common_margin_167">167dp</dimen>
+    <dimen name="common_margin_205">205dp</dimen>
+    <dimen name="common_margin_top_bottom_12">12dp</dimen>
+    <dimen name="common_text_11">11sp</dimen>
+    <dimen name="common_text_10">10sp</dimen>
+    <dimen name="common_text_12">12sp</dimen>
+    <dimen name="common_text_13">13sp</dimen>
+    <dimen name="common_text_14">14sp</dimen>
+    <dimen name="common_text_15">15sp</dimen>
+    <dimen name="common_text_16">16sp</dimen>
+    <dimen name="common_text_17">17sp</dimen>
+    <dimen name="common_text_18">18sp</dimen>
+    <dimen name="common_line_1">1px</dimen>
+    <dimen name="common_btn_height_48">48dp</dimen>
+    <dimen name="common_width_24">24dp</dimen>
+    <dimen name="custom_up_down_4">4dp</dimen>
+    <dimen name="custom_up_down_20">20dp</dimen>
+    <dimen name="common_margin_top_bottom_8">8dp</dimen>
+    <dimen name="common_top_bottom_32">32dp</dimen>
+    <dimen name="common_height_40">40dp</dimen>
+    <dimen name="common_height_54">54dp</dimen>
+    <dimen name="common_height_60">60dp</dimen>
+    <dimen name="common_margin_top_bottom_20dp">20dp</dimen>
+    <dimen name="common_padding_8">8dp</dimen>
+    <dimen name="common_padding_16">16dp</dimen>
+
+    <!--学习中心首页-->
+    <dimen name="hw_tab_drawable_padding">4dp</dimen>
+    <dimen name="hw_tab_padding_top_bottom">6dp</dimen>
+    <dimen name="hw_tab_padding_left_right">10dp</dimen>
+
+    <dimen name="hw_padding_bottom">60dp</dimen>
+    <dimen name="hw_topbar_height">50dp</dimen>
+
+    <!-- 作业 -->
+    <dimen name="hw_word_text_36">36sp</dimen>
+    <dimen name="hw_score_text_size">16sp</dimen>
+
+    <!-- 个人 -->
+    <dimen name="user_padding_et_40">40dp</dimen>
+    <dimen name="user_fb_height">80dp</dimen>
+    <dimen name="user_lv_divider_height">12dp</dimen>
+    <dimen name="user_main_left_56">56dp</dimen>
+    <dimen name="user_psw_left_60">70dp</dimen>
+    <dimen name="tutor_funny_voice_height">320dp</dimen>
+    <!-- vip center -->
+    <dimen name="vip_user_profile_icon">70dp</dimen>
+    <dimen name="vip_list_height">50dp</dimen>
+    <dimen name="vip_left_right_margin">10dp</dimen>
+    <dimen name="vip_list_divider">8dp</dimen>
+    <dimen name="vip_list_check_size">20dp</dimen>
+    <dimen name="vip_list_margin">15dp</dimen>
+    <dimen name="vip_list_inner_margin">10dp</dimen>
+    <dimen name="common_line_one_dp">1dp</dimen>
+    <dimen name="pay_result_icon">120dp</dimen>
+    <dimen name="vip_order_upper_margin">10dp</dimen>
+    <dimen name="vip_agreement_check_size">13dp</dimen>
+
+    <!-- tutor -->
+    <dimen name="tutor_course_viewpager_item_height_1">50dp</dimen>
+    <dimen name="tutor_course_viewpager_item_height_2">35dp</dimen>
+    <dimen name="tutor_course_viewpager_item_marginTop_1">10dp</dimen>
+    <dimen name="tutor_course_fancycoverflow_bottom">40dp</dimen>
+    <dimen name="tutor_course_top_course_top">30dp</dimen>
+    <dimen name="tutor_course_seleced_course_top">145dp</dimen>
+    <dimen name="tutor_course_item_finish">0dp</dimen><!--口语家教页面完成标志-->
+    <dimen name="tutor_course_spokentop">60dp</dimen><!--口语家教页面完成标志-->
+    <dimen name="tutor_submit_pro_margin">24dp</dimen><!--口语家教结果页 进度条左右边距-->
+    <dimen name="tutor_common_start_margin_left_right">8dp</dimen><!--口语家教开始页 进度条左右边距-->
+    <dimen name="tutor_common_seek_thumb_speed_style_size">1dp</dimen><!--口语家教开始页 风格和语速的进度条光标大小-->
+    <dimen name="tutor_subimit_dialog_degree_margin_top">12dp</dimen><!--口语家教结果页 degree上边距-->
+    <dimen name="tutor_subimit_dialog_num_margin_top">12dp</dimen><!--口语家教结果页 【句子数】上边距-->
+    <dimen name="tutor_subimit_dialog_margin_top">0dp</dimen><!--口语家教结果页 背景框上边距-->
+    <dimen name="tutor_subimit_dialog_btn_margin_bottom">18dp</dimen><!--口语家教结果页 按钮距底部边距-->
+    <dimen name="tutor_subimit_dialog_margin_left_right">24dp</dimen><!--口语家教结果页 背景框左右边距-->
+
+
+    <!--作业提交成功页面 -->
+    <dimen name="studycenter_hw_ss_score_margintop">-18dp</dimen><!--作业提交页分数-->
+
+    <dimen name="ss_score_single_digit">17dp</dimen><!--作业提交页个位 分数的位置-->
+    <dimen name="ss_score_double_digit">28dp</dimen><!--作业提交页十位 分数的位置-->
+    <dimen name="ss_score_hundreds_digit">39dp</dimen><!--作业提交页百位 分数的位置-->
+    <dimen name="ss_score_top">-8dp</dimen><!--作业提交页百位 分数的位置-->
+
+
+    <dimen name="vip_animation_exp_im">45dp</dimen>
+    <dimen name="vip_animation_valid_date_width">140dp</dimen>
+    <dimen name="vip_animation_valid_date_height">26dp</dimen>
+    <dimen name="vip_animation_valid_date_bottom">45dp</dimen>
+
+    <!--adapter-->
+    <dimen name="ek_comm_all_margin">54dp</dimen>
+    <dimen name="ek_conn_ex_ebean_margin">28dp</dimen>
+    <dimen name="ek_comm_top_margin">34dp</dimen>
+    <dimen name="ek_comm_btn_margin">20dp</dimen>
+    <dimen name="ek_select_wh">92dp</dimen>
+
+    <dimen name="trans_exp_x">160px</dimen>
+    <dimen name="trans_exp_y">-250px</dimen>
+    <dimen name="trans_ebean_x">200px</dimen>
+    <dimen name="trans_ebean_y">-350px</dimen>
+
+    <!-- 口语家教选择课程下拉列表的item高度 -->
+    <dimen name="select_course_list_item_height">48dp</dimen>
+    <dimen name="pk_drum_margin">57dp</dimen>
+
+    <dimen name="period_loading_top">150dp</dimen>
+    <dimen name="commpetition_fab_bootom">28dp</dimen>
+
+
+    <!-- 3.0引导页 -->
+    <dimen name="nav_one_left_marginbottom">142dp</dimen>
+    <dimen name="nav_one_right_marginbottom">132dp</dimen>
+    <dimen name="nav_one_left_marginleft">40dp</dimen>
+    <dimen name="nav_one_right_marginright">31dp</dimen>
+    <dimen name="nav_one_vs_marginbottom">320dp</dimen>
+    <dimen name="nav_two_flag_marginbottom">325dp</dimen>
+    <dimen name="nav_two_flag_marginleft">103dp</dimen>
+    <dimen name="nav_three_left_marginbottom">163dp</dimen>
+    <dimen name="nav_three_left_marginleft">8dp</dimen>
+    <dimen name="nav_three_right_marginbottom">237dp</dimen>
+    <dimen name="nav_three_btn_marginbottom">63dp</dimen>
+
+    <dimen name="ek_word_margin_bottom">8dp</dimen>
+    <dimen name="common_margin_7">7dp</dimen>
+    <dimen name="login_tab_text_normal_size">16dp</dimen>
+    <dimen name="login_tab_text_select_size">20dp</dimen>
+
+    <dimen name="main_red_dot">10dp</dimen>
+
+    <!-- 3.1引导页 -->
+    <dimen name="nav_btn_margin">58dp</dimen>
+
+    <dimen name="hw_progress_height">50dp</dimen>
+    <dimen name="login_bg_height">95dp</dimen>
+    <dimen name="padding_bottom_home_title">8dp</dimen>
+
+    <dimen name="ek_top_iv_marginLR">24dp</dimen>
+
+    <dimen name="pk_title_width">288dp</dimen>
+    <dimen name="pk_title_height">60dp</dimen>
+    <dimen name="pk_back_top">330dp</dimen>
+    <dimen name="pk_back_height">120dp</dimen>
+    <dimen name="pk_back_marginTop">60dp</dimen>
+    <dimen name="pk_drum_height">300dp</dimen>
+    <dimen name="pk_drum_top">57dp</dimen>
+    <dimen name="pk_find_no_rival_top">80dp</dimen>
+    <dimen name="pk_has_rival_width">270dp</dimen>
+    <dimen name="pk_change_rival_top">200dp</dimen>
+    <dimen name="wheel_val_pk_width">83dp</dimen>
+    <dimen name="pk_my_head_left">36.5dp</dimen>
+    <dimen name="pk_my_name_width">160dp</dimen>
+    <dimen name="my_iv_vip">20dp</dimen>
+    <dimen name="pk_vs_left">35dp</dimen>
+    <dimen name="pk_circle_size">83dp</dimen>
+    <dimen name="pk_question_height">36dp</dimen>
+    <dimen name="pk_suc_left_weight">300dp</dimen>
+
+
+    <dimen name="common_video_margin">28dp</dimen>
+
+    <dimen name="tutor_pk_times_margin_right">15dp</dimen>
+    <dimen name="tutor_pk_times_tv_size">14sp</dimen>
+    <dimen name="tutor_audition_tv_size">16sp</dimen>
+    <dimen name="tutor_pk_info_margin_top">24dp</dimen>
+    <dimen name="tutor_pk_bar_margin_14">14dp</dimen>
+    <dimen name="tutor_pk_bar_magin_19">19dp</dimen>
+    <dimen name="tutor_pk_match_padding_12">12dp</dimen>
+    <dimen name="tutor_pk_match_margin_30">30dp</dimen>
+    <dimen name="tutor_btn_bg_padding_10">10dp</dimen>
+    <dimen name="tutor_btn_bg_padding_30">30dp</dimen>
+
+    <dimen name="tutor_pk_btn_margin_top">20dp</dimen>
+    <dimen name="tutor_pk_btn_margin_top_back">-30dp</dimen>
+    <dimen name="pk_anim_right_margin">36dp</dimen>
+    <dimen name="pk_anim_left_margin">36dp</dimen>
+    <dimen name="pk_anim_right_margin_top">110dp</dimen>
+    <dimen name="pk_anim_left_margin_top">110dp</dimen>
+    <dimen name="study_wise_margin_bottom">15dp</dimen>
+    <dimen name="pk_suc_margin">80dp</dimen>
+    <dimen name="pk_leftdrum_margin_bottom">70dp</dimen>
+    <dimen name="pk_rightdrum_margin_bottom">100dp</dimen>
+    <dimen name="pk_little_yellow_margin_bottom">116dp</dimen>
+
+    <!--3.2专辑详情页的图片-->
+    <!--<dimen name="album_cover_height">184dp</dimen>-->
+
+
+    <dimen name="ek_task_dialog_margin_left_right">26dp</dimen>
+
+    <dimen name="tutor_submit_btn_width">182dp</dimen>
+    <dimen name="tutor_submit_btn_height">37dp</dimen>
+
+    <!--第三方关联登录-确认授权页-->
+    <dimen name="oauth_btn_margin_left_right">45dp</dimen>
+
+    <!--口语家教 成绩页面 内容框和顶部成绩达标的距离-->
+    <dimen name="tutor_submit_dialog_top_margin">28dp</dimen>
+    <dimen name="share_pic_cord_size">42dp</dimen>
+    <dimen name="share_pic_head_size">52dp</dimen>
+
+    <!--弹窗-->
+    <dimen name="dialog_text_size">14sp</dimen>
+    <dimen name="dialog_text_line_height">8dp</dimen>
+    <dimen name="dialog_btn_width">135dp</dimen>
+    <dimen name="dialog_btn_height">40dp</dimen>
+    <dimen name="dialog_version_margin_top">75dp</dimen>
+    <!--绘本阅读-->
+    <dimen name="picture_book_left_width">247dp</dimen>
+    <dimen name="picture_book_left_height">230dp</dimen>
+
+    <dimen name="book_reading_common_menu_height">64dp</dimen>
+    <dimen name="book_reading_bookbg_margin_top">14dp</dimen>
+    <dimen name="book_reading_bookbg_margin_right">34dp</dimen>
+    <dimen name="book_reading_bookbg_margin_left">34dp</dimen>
+    <dimen name="book_reading_bookbg_margin_bottom">19dp</dimen>
+    <dimen name="book_reading_bookback_margin_left">46dp</dimen>
+    <dimen name="book_reading_item_margin_top">14dp</dimen>
+    <dimen name="book_reading_item_margin_bottom">14dp</dimen>
+    <dimen name="book_reading_item_margin_left">8dp</dimen>
+    <dimen name="book_reading_item_margin_right">8dp</dimen>
+    <dimen name="book_reading_pic_margin_top">29dp</dimen>
+    <dimen name="book_reading_word_margin">33dp</dimen>
+    <dimen name="book_reading_submit_margin">39.5dp</dimen>
+    <dimen name="book_reading_btn_stroke_width">2dp</dimen>
+    <dimen name="book_reading_page_width">44dp</dimen>
+    <dimen name="book_reading_page_height">22dp</dimen>
+
+    <!--待完成列表-->
+    <dimen name="unfinish_list_tab_height">35dp</dimen>
+    <!-- 3.5引导页 -->
+    <dimen name="nav_btn_margin_new">72dp</dimen>
+    <dimen name="common_24_sp">24sp</dimen>
+    <dimen name="tutor_top_canscroll_total">167dp</dimen>
+    <dimen name="tutor_top_alphe">67dp</dimen>
+</resources>

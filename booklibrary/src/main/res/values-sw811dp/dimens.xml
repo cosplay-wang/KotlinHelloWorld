@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="text_margin">36.0444dp</dimen>
+	<dimen name="rl_pk_success_pk_top_margin">159.9472dp</dimen>
+	<dimen name="rl_pk_success_pk_height">326.6528dp</dimen>
+	<dimen name="rl_pk_success_pk_left_width">738.9111dp</dimen>
+	<dimen name="rl_num_question_width">540.6667dp</dimen>
+</resources>

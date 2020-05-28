@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MykotlinHelloWorld.iml" filepath="$PROJECT_DIR$/MykotlinHelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audioCompose/MykotlinHelloWorld-audioCompose.iml" filepath="$PROJECT_DIR$/audioCompose/MykotlinHelloWorld-audioCompose.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audioCompose/audioCompose.iml" filepath="$PROJECT_DIR$/audioCompose/audioCompose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/booklibrary/booklibrary.iml" filepath="$PROJECT_DIR$/booklibrary/booklibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/happy-bubble/happy-bubble.iml" filepath="$PROJECT_DIR$/happy-bubble/happy-bubble.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
     </modules>

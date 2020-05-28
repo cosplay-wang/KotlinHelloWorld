@@ -1,1 +1,1 @@
-include ':app', ':mylibrary', ':happy-bubble'
+include ':app', ':mylibrary', ':happy-bubble', ':booklibrary', ':audioCompose'
